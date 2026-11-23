@@ -305,6 +305,24 @@
       "width": 640,
       "height": 444,
       "bytes": 46752
+    },
+    {
+      "src": "/images/retro-office-1280.webp",
+      "width": 1280,
+      "height": 888,
+      "bytes": 75562
+    },
+    {
+      "src": "/images/retro-office-3840.webp",
+      "width": 3840,
+      "height": 2664,
+      "bytes": 299446
+    },
+    {
+      "src": "/images/retro-office-7680.webp",
+      "width": 7680,
+      "height": 5328,
+      "bytes": 720666
     }
   ],
   "business-workspace-4k": [
