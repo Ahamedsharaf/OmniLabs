@@ -6,7 +6,7 @@ function WorkWithUsPage() {
   const projectOptions = [["A defined project", "Plan one campaign, workflow, website, or application. We build to an agreed scope and hand the work over to your team."], ["Ongoing support", "Keep the work current after launch. We agree which updates, improvements, and reviews your team needs."]];
   return <div data-node-label="Work With Us Desktop" className="w-full min-w-0 [font-family:var(--omni-interface-font)]">
       <header data-node-label="Page Header" className="relative w-full overflow-hidden px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] [background-color:var(--nura-ink)] [color:var(--nura-white)]">
-        <StudioBackdrop />
+        <StudioBackdrop eager />
         <div data-node-label="Page Header Container" className="relative z-[10] mx-auto w-full max-w-[1320px]">
           <SiteNavigation />
           <div data-node-label="Page Lead" className="flex flex-col items-center justify-center pt-[82px] pb-[100px] gap-5 text-center max-[1100px]:pt-16 max-[1100px]:pb-20 max-[700px]:py-16 max-[700px]:gap-4" data-artboard-style="ref-157">

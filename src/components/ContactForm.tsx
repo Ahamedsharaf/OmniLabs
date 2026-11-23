@@ -9,7 +9,7 @@ export function ContactForm({screen='home',embedded=false}:Props) {
   const id=useId(), form=useRef<HTMLFormElement>(null),reviewRef=useRef<HTMLElement>(null);
   const [review,setReview]=useState<Inquiry|null>(null);
   const [status,setStatus]=useState<'idle'|'sending'|'sent'|'error'>('idle');
-  useEffect(()=>{if(review)reviewRef.current?.focus({preventScroll:true});},[review]);
+  useEffect(()=>{if(review)reviewRef.current?.focus();},[review]);
   function prepare(event:FormEvent<HTMLFormElement>) {
     event.preventDefault(); const data=new FormData(event.currentTarget);
     setReview(Object.fromEntries(['name','email','company','service','details'].map(k=>[k,String(data.get(k)||'').trim()])) as Inquiry);setStatus('idle');
@@ -23,7 +23,7 @@ export function ContactForm({screen='home',embedded=false}:Props) {
     } catch {setStatus('error');}
   }
   return <form ref={form} className={`inquiry-form ${embedded?'inquiry-embedded':''}`} onSubmit={prepare}>
-    {!embedded && <div className="inquiry-head"><h2 id="contact-dialog-title">Start a conversation.</h2><p>Tell us what you’re working on and where you could use our help.</p><RouteAction to="dismiss" className="circle-button inquiry-close" aria-label="Close contact form"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></RouteAction></div>}
+    {!embedded && <div className="inquiry-head"><h2 id="contact-dialog-title">Start a conversation.</h2><p>Tell us what you’re working on and where you could use our help.</p><RouteAction to="dismiss" className="circle-button inquiry-close" data-dialog-close aria-label="Close contact form"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></RouteAction></div>}
     <div className="inquiry-fields">
       <div className="inquiry-identity">
         <label htmlFor={`${id}-name`}>Name<input id={`${id}-name`} name="name" placeholder={embedded?'Your name':'Full name'} autoComplete="name" required maxLength={160}/></label>

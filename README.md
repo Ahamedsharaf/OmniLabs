@@ -26,7 +26,7 @@ all 19 routes plus the 404 page. Deploy the resulting `dist` directory.
 - `src/design/wonder.css`: the export's original compiled design tokens/utilities.
 - `src/design/artboard-fidelity.css`: mobile/tablet values from the separate artboards.
 - `src/styles.css`: interactive controls, accessibility and production corrections.
-- `src/motion.css`, `src/components/usePageMotion.ts`: restrained entrance, image and scroll motion.
+- `src/motion.css`, `src/components/usePageMotion.ts`: hero type entrance, project panel and scroll motion.
 - `src/site/routes.mjs`: URLs, document titles and descriptions.
 - `src/site/assets.json`, `public/images/`: supplied imagery and responsive variants.
 - `src/components/ContactForm.tsx`: validated inquiry preparation and optional delivery.

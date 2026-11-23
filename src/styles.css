@@ -15,13 +15,74 @@ button:disabled { cursor:wait; opacity:.6; }
 input:focus-visible,select:focus-visible,textarea:focus-visible { outline:2px solid #264b3d; outline-offset:3px; }
 main:focus,h1:focus,h2:focus { outline:none; }
 .site-main { width:100%; min-width:0; }
+@layer components {
+  .artwork-frame { position:relative; overflow:clip; }
+}
 .artwork-image { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
 [data-node-label="Omni Labs Logo"] {width:160px;height:auto;}
 [data-node-label="Omni Labs Brand Lockup"] {flex-shrink:0;}
 [data-node-label="Hero Message"] {min-width:0;}
-[data-node-label="Golden Gate Feature Frame"] {isolation:isolate;}
-[data-node-label="Enterprise Masthead"] {right:0;}
+[data-light=true] button[aria-label="Open menu"] {color:#151515;border-color:#767c75;}
+[data-light=true] button[aria-label="Open menu"]:hover {background-color:#1515150a;}
 [data-node-label="Footer Invitation Heading"] {text-shadow:0 2px 22px #0005;}
+.home-hero {
+  --hero-gutter: clamp(22px, 4.17vw, 60px);
+  color:var(--nura-white);
+  background:var(--nura-ink);
+}
+.home-hero-frame {
+  position:relative;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  min-height:100vh;
+  min-height:100svh;
+  padding:112px var(--hero-gutter) clamp(32px, 7.5svh, 84px);
+  overflow:clip;
+}
+.home-hero-header {
+  position:absolute;
+  inset:0 0 auto;
+  z-index:20;
+  padding-inline:var(--hero-gutter);
+}
+[data-node-label="Golden Gate Hero Photograph"] .artwork-image {object-position:50% 28%;}
+.home-hero-shade {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg, #0c101ccc, #0c101c49 13%, transparent 30%),
+    linear-gradient(0deg, #0c100fed, #0c100f9c 18%, #0c100f2e 43%, transparent 61%);
+}
+.home-hero-headline {
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+  gap:3px;
+  font-family:"ABC Favorit",Inter,sans-serif;
+  font-size:clamp(48px, 5.84vw, 84px);
+  font-weight:300;
+  line-height:1.05;
+  letter-spacing:-.052em;
+}
+.hero-line, .hero-line > span {display:block;}
+@media (min-width:640px) and (max-width:960px) {
+  .home-hero-headline {font-size:clamp(52px, 8.7vw, 67px);}
+}
+@media (max-width:639px) {
+  .home-hero-frame {padding-block-start:92px;}
+  .home-hero-headline {font-size:clamp(33px, 10.67vw, 48px);letter-spacing:-.045em;}
+  .home-hero-shade {
+    background:
+      linear-gradient(180deg, #0c101cba, transparent 26%),
+      linear-gradient(0deg, #0c100ff2, #0c100fc4 22%, #0c100f3d 56%, transparent 72%);
+  }
+}
+@media (max-width:639px) and (orientation:portrait) {
+  [data-node-label="Golden Gate Hero Photograph"] .artwork-image {object-position:46% 48%;}
+}
 .skip-link { position:fixed; z-index:100; top:10px; left:10px; transform:translateY(-150%); background:white; color:#151515; padding:12px 20px; border-radius:30px; }
 .skip-link:focus { transform:translateY(0); }
 .pill { display:inline-flex; min-height:48px; align-items:center; justify-content:center; width:fit-content; padding:0 19px; gap:9px; border:1px solid transparent; border-radius:999px; font-size:14px; font-weight:500; line-height:1.3; transition:opacity .2s,transform .2s; }
@@ -86,12 +147,9 @@ main:focus,h1:focus,h2:focus { outline:none; }
   .inquiry-head h2 { font-size:32px; line-height:1.1; letter-spacing:-1.3px; }
   .inquiry-embedded { padding:0; }
   .not-found { padding:30px 22px; }
-  [data-light=true] button[aria-label="Open menu"] { color:#151515; border-color:#6c6c6a; }
 }
 @media(max-width:639px) {
-  [data-node-label="Enterprise Masthead"] {padding-inline:15px;min-height:64px;}
   [data-node-label="Masthead Alignment"] {min-height:64px;}
-  [data-art-position="art-1"]>.artwork-image {object-position:42% 46%;}
 }
 @media(max-width:460px) { .inquiry-identity {grid-template-columns:1fr;} }
 @media(prefers-reduced-motion:reduce) {

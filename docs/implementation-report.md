@@ -7,13 +7,17 @@
 | Omni Labs Code(1) | 43 TSX files: 19 page designs, responsive variants, navigation, dialog/footer artboards and a combined interactive prototype |
 | export (1).zip | 42 JPG screen references |
 | webPG | 43 WebP references, including Connected Growth Journey |
-| Subsequent upload | 5 photographs and the approved transparent black/white logos |
+| Subsequent uploads | 5 photographs, the approved transparent black/white logos, and the standalone white mark for the favicon |
 | Booking | Owner-provided Cal.com event: https://cal.com/ahamedsharaf/30min |
 
 All 13 images referenced by the original export were accessible and downloaded.
-The owner's subsequent uploads replace the hero bridge photograph, business
-workspace, production set, agent film still, footer conversation and both logos.
-Each is served from this project as optimized responsive WebP, without upscaling.
+The owner supplied the bridge, workspace, production set, agent film still,
+footer conversation, logos and favicon mark. Photography is served as
+responsive WebP. The higher-resolution Wonder originals of the same bridge
+and production set are used for wide and high-density frames. The phone hero
+uses a portrait crop from that bridge original. The Agents & Automation hero
+uses the supplied Wonder artboard photograph, and its home card uses the
+separately uploaded film still.
 
 The design-source manifest records the original archive entries and their SHA256
 checksums. Desktop artboards are 1440px wide, mobile artboards 375px, and the three
@@ -35,13 +39,14 @@ tablet artboards are 768px.
 | Composition and copy | Kept the supplied section sequence, headline, service labels, navigation and CTA labels. No extra home hero copy was added. |
 | Palette | Retained exact Wonder tokens, including paper #f7f7f5, ink #151515, footer #0c0f0d and spruce #264b3d. |
 | Typography | Kept the original scales, weights, tracking and Inter fallback. Restored native mobile/tablet values where the combined prototype differed. |
-| Hero and logo | Corrected the production logo width and responsive masthead bounds; retained the split desktop headline/support composition and stacked mobile composition. |
+| Hero and logo | The hero fills the viewport edge to edge. The desktop headline and supporting copy remain side by side, and the phone layout stacks them over a crop that keeps the bridge tower in view. |
 | Imagery | Replaced the relevant imagery with the separately supplied originals, preserved purposeful crops and used responsive files. The newly supplied footer scene is an owner-requested change from the green studio image. |
 | Icons | Converted prototype targets to native links/buttons and corrected cascade conflicts so icons retain the design's intended foreground color. |
 | Responsive layout | Applied 296 content-matched mobile/tablet styles from the separate artboards rather than substituting a new layout. |
-| Motion | Added owner-requested cinematic image drift, staggered hero entrances, once-per-section scroll reveals and restrained card hover motion; all respect reduced-motion preferences. |
+| Motion | The bridge remains still as the headline reveals line by line. The project panel draws an outline and reveals its dot grids on entry. All animations respect reduced-motion preferences. |
 | Forms | Real labels, fields and validation replace painted controls. Review/delivery status and a Book a call link are necessary functional additions. |
 | Video slots | Keep supplied posters and captions. A preview dialog explicitly identifies missing video content instead of inventing playback or testimonials. |
+| Production repairs | The About photograph sits inside its square card, menu controls have contrast on light tablet headers, and section links use real fragment targets. Closing the contact dialog from the mobile menu restores focus to the menu button. |
 
 The original references and rendered browser screenshots are compared directly.
 Exact licensed ABC Favorit/Inter Display files are unavailable; font fallback,
@@ -83,3 +88,10 @@ palette, image framing, spacing and icons. The headline/nav/CTA copy above the
 fold matches the supplied copy; no compensating marketing text was added.
 The hero, responsive logo sizing, arrow colors and supplied image selection were
 corrected during browser review.
+
+The follow-up review checked all 19 routes at 1363 × 936 and 379 × 919
+and the Home, Portfolio and Workflow artboards at 768px. Loaded pages had
+no sideways overflow or images positioned outside their frames. The review
+also exercised the project CTA and its scroll animation, the mobile menu
+and contact dialog, portfolio previews, and inquiry review. Automated
+checks now verify fragment destinations and responsive image files.

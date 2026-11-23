@@ -37,6 +37,18 @@
       "width": 1536,
       "height": 1024,
       "bytes": 445792
+    },
+    {
+      "src": "/images/golden-gate-2560.webp",
+      "width": 2560,
+      "height": 1706,
+      "bytes": 624030
+    },
+    {
+      "src": "/images/golden-gate-3600.webp",
+      "width": 3600,
+      "height": 2399,
+      "bytes": 879972
     }
   ],
   "orange-motion": [
@@ -179,6 +191,24 @@
       "width": 736,
       "height": 736,
       "bytes": 116090
+    },
+    {
+      "src": "/images/film-production-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "bytes": 163122
+    },
+    {
+      "src": "/images/film-production-1600.webp",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 217102
+    },
+    {
+      "src": "/images/film-production-2208.webp",
+      "width": 2208,
+      "height": 2208,
+      "bytes": 289906
     }
   ],
   "agents-film": [
@@ -221,6 +251,46 @@
       "width": 1600,
       "height": 914,
       "bytes": 100194
+    }
+  ],
+  "golden-gate-portrait": [
+    {
+      "src": "/images/golden-gate-portrait-480.webp",
+      "width": 480,
+      "height": 615,
+      "bytes": 69866
+    },
+    {
+      "src": "/images/golden-gate-portrait-800.webp",
+      "width": 800,
+      "height": 1025,
+      "bytes": 176754
+    },
+    {
+      "src": "/images/golden-gate-portrait-1200.webp",
+      "width": 1200,
+      "height": 1538,
+      "bytes": 322070
+    },
+    {
+      "src": "/images/golden-gate-portrait-1600.webp",
+      "width": 1600,
+      "height": 2051,
+      "bytes": 426246
+    }
+  ],
+  "agents-studio": [
+    {
+      "src": "/images/agents-studio-768.webp",
+      "width": 768,
+      "height": 768,
+      "bytes": 160794
+    },
+    {
+      "src": "/images/agents-studio-1024.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 280034
     }
   ]
 }

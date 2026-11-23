@@ -25,9 +25,8 @@ function WorkflowVisualCard({
   item
 }) {
   return <div data-node-label="Visual Workflow Card" className="flex relative min-w-0 min-h-[600px] flex-col justify-between [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-xl p-6 overflow-clip max-[1100px]:min-h-[420px] max-[700px]:min-h-[460px] max-[700px]:p-[22px]">
-      <div data-wonder-intrinsic-width="1792" data-wonder-intrinsic-height="1024" data-node-label="Workflow Card Photograph" className="size-full inset-0 block absolute max-w-full z-[0] bg-cover bg-no-repeat bg-center" style={{
-      backgroundImage: "url(" + item.image + ")"
-    }}></div>
+      <Artwork data-node-label="Workflow Card Photograph" className="size-full inset-0 absolute" image={item.image}
+        sizes={item.image === "orange-motion" ? "(max-width: 1100px) max(100vw, 805px), 1050px" : "(max-width: 1100px) 100vw, 32vw"} />
       <div data-node-label="Workflow Card Shade" className="inset-0 block absolute z-[1] [background-image:linear-gradient(0deg,_var(--omni-cinema-scrim)_0%,_var(--omni-clear-shade)_85%)]"></div>
       <div data-node-label="Workflow Interface Area" className="block relative w-full max-w-[340px] self-center z-[10]">
         {item.widget}
@@ -40,7 +39,7 @@ function WorkflowVisualCard({
 }
 const workflowVisualData = [{
   ids: ["lie.won", "lie.rye", "lie.cit", "lie.tel", "lie.wis", "lie.gel", "lie.age"],
-  image: "/images/orange-motion-1600.webp",
+  image: "orange-motion",
   title: "Define the direction",
   copy: "Align the goal, audience, and scope before production begins.",
   widget: <div data-node-label="Project Brief Interface" className="block w-full [background-color:var(--nura-white)] [color:var(--nura-ink)] rounded-xl p-5">
@@ -60,13 +59,13 @@ const workflowVisualData = [{
         </div>
 }, {
   ids: ["lie.dec", "lie.boy", "lie.dip", "lie.aaa", "lie.sep", "lie.jar", "lie.tax"],
-  image: "/images/creative-workspace-960.webp",
+  image: "creative-workspace",
   title: "Create and build",
   copy: "Produce the content, workflows, or software around the approved direction.",
   widget: <div data-node-label="Production Photograph Space" className="block w-full min-h-5"></div>
 }, {
   ids: ["lie.feb", "lie.who", "lie.lab", "lie.nsw", "lie.gib", "lie.mrs", "lie.sla"],
-  image: "/images/forest-portrait-960.webp",
+  image: "forest-portrait",
   title: "Review and launch",
   copy: "Test the details, agree the release, and hand over what your team needs.",
   widget: <div data-node-label="Release Review Interface" className="block w-full [background-color:var(--nura-white)] [color:var(--nura-ink)] rounded-xl p-5">

@@ -673,5 +673,10 @@
     "file": "additional-upload/Omni_Labs_Logo_White(2).png",
     "bytes": 75273,
     "sha256": "ef13967921e352bdb70624e5d8c810b063dd6a274b701eb6172d0f38450383e1"
+  },
+  {
+    "file": "additional-upload/Omni_Labs_Icon_White(2).png",
+    "bytes": 150322,
+    "sha256": "6f65e6552d070d4dd674317c0271f49ab5e318ed0b5318649d7ef5308fd75d3a"
   }
 ]

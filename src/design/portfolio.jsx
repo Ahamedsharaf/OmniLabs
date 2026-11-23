@@ -1,5 +1,6 @@
 // Adapted from the user's approved Wonder export. Layout and copy retained.
 import { VideoPreview } from "../components/VideoPreview";
+import { Artwork } from "../components/Artwork";
 import { RouteAction } from "../components/RouteAction";
 import { SiteNavigation } from "./navigation";
 const portfolioVideoData = {
@@ -8,7 +9,7 @@ const portfolioVideoData = {
     "labels": ["Brand Film Video Card", "Brand Film Video Space", "Brand Film Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Brand film",
     "index": "01",
-    "image": "/images/orange-motion-1600.webp",
+    "image": "orange-motion",
     "ratio": "16:9",
     "portrait": false
   }, {
@@ -16,7 +17,7 @@ const portfolioVideoData = {
     "labels": ["Product Launch Video Card", "Product Launch Video Space", "Product Launch Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Product launch",
     "index": "02",
-    "image": "/images/monochrome-motion-1600.webp",
+    "image": "monochrome-motion",
     "ratio": "16:9",
     "portrait": false
   }, {
@@ -24,7 +25,7 @@ const portfolioVideoData = {
     "labels": ["Campaign Spot Video Card", "Campaign Spot Video Space", "Campaign Spot Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Campaign spot",
     "index": "03",
-    "image": "/images/creative-workspace-960.webp",
+    "image": "creative-workspace",
     "ratio": "16:9",
     "portrait": false
   }, {
@@ -32,7 +33,7 @@ const portfolioVideoData = {
     "labels": ["Brand Story Video Card", "Brand Story Video Space", "Brand Story Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Brand story",
     "index": "04",
-    "image": "/images/orange-motion-1600.webp",
+    "image": "orange-motion",
     "ratio": "16:9",
     "portrait": false
   }],
@@ -41,7 +42,7 @@ const portfolioVideoData = {
     "labels": ["Creator Story Video Card", "Creator Story Video Space", "Creator Story Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Creator story",
     "index": "01",
-    "image": "/images/forest-portrait-960.webp",
+    "image": "forest-portrait",
     "ratio": "9:16",
     "portrait": true
   }, {
@@ -49,7 +50,7 @@ const portfolioVideoData = {
     "labels": ["Product Demo Video Card", "Product Demo Video Space", "Product Demo Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Product demo",
     "index": "02",
-    "image": "/images/forest-portrait-960.webp",
+    "image": "forest-portrait",
     "ratio": "9:16",
     "portrait": true
   }, {
@@ -57,7 +58,7 @@ const portfolioVideoData = {
     "labels": ["Testimonial Video Card", "Testimonial Video Space", "Testimonial Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Testimonial",
     "index": "03",
-    "image": "/images/creative-workspace-960.webp",
+    "image": "creative-workspace",
     "ratio": "9:16",
     "portrait": true
   }, {
@@ -65,7 +66,7 @@ const portfolioVideoData = {
     "labels": ["Social Ad Video Card", "Social Ad Video Space", "Social Ad Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Social ad",
     "index": "04",
-    "image": "/images/monochrome-motion-1600.webp",
+    "image": "monochrome-motion",
     "ratio": "9:16",
     "portrait": true
   }],
@@ -74,7 +75,7 @@ const portfolioVideoData = {
     "labels": ["Brand Motion Video Card", "Brand Motion Video Space", "Brand Motion Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Brand motion",
     "index": "01",
-    "image": "/images/monochrome-motion-1600.webp",
+    "image": "monochrome-motion",
     "ratio": "16:9",
     "portrait": false
   }, {
@@ -82,7 +83,7 @@ const portfolioVideoData = {
     "labels": ["Product Explainer Video Card", "Product Explainer Video Space", "Product Explainer Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Product explainer",
     "index": "02",
-    "image": "/images/orange-motion-1600.webp",
+    "image": "orange-motion",
     "ratio": "16:9",
     "portrait": false
   }, {
@@ -90,7 +91,7 @@ const portfolioVideoData = {
     "labels": ["Logo Animation Video Card", "Logo Animation Video Space", "Logo Animation Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Logo animation",
     "index": "03",
-    "image": "/images/orange-motion-1600.webp",
+    "image": "orange-motion",
     "ratio": "16:9",
     "portrait": false
   }, {
@@ -98,7 +99,7 @@ const portfolioVideoData = {
     "labels": ["Motion System Video Card", "Motion System Video Space", "Motion System Poster Artwork", "Video Poster Shade", "Video Aspect Ratio", "Reserved Video Symbol", "SVG", "Video Space Caption", "Video Space Status", "Video Space Index", "Video Piece Title"],
     "title": "Motion system",
     "index": "04",
-    "image": "/images/monochrome-motion-1600.webp",
+    "image": "monochrome-motion",
     "ratio": "16:9",
     "portrait": false
   }]
@@ -108,9 +109,10 @@ function PortfolioVideoCard({
 }) {
   return <div data-node-label={item.labels[0]} className="group/video flex min-w-0 flex-col gap-4">
         <VideoPreview data-portrait={item.portrait} role="img" aria-label={"Video space: " + item.title} data-node-label={item.labels[1]} className="block relative w-full min-w-0 min-h-0 aspect-video data-[portrait=true]:aspect-[9/16] [background-color:var(--nura-ink)] rounded-lg overflow-clip" item={item}>
-          <div data-node-label={item.labels[2]} className="size-full inset-0 block absolute max-w-full bg-cover bg-no-repeat bg-center transition-transform duration-500 group-hover/video:scale-[1.015] motion-reduce:transition-none" style={{
-        backgroundImage: "url(" + item.image + ")"
-      }}></div>
+          <Artwork data-node-label={item.labels[2]} className="size-full inset-0 absolute" image={item.image}
+            sizes={item.portrait
+              ? "(max-width: 700px) max(44vw, 360px), (max-width: 1100px) 50vw, max(24vw, 500px)"
+              : "(max-width: 700px) calc(100vw - 44px), 50vw"} />
           <div data-node-label={item.labels[3]} className="inset-0 block absolute [background-image:linear-gradient(0deg,_var(--nura-callout-shade)_0%,_var(--omni-clear-shade)_100%)]"></div>
           <span data-node-label={item.labels[4]} className="absolute top-5 right-5 [color:var(--nura-white)] [font-family:var(--omni-mono-font)] text-[13px] font-normal not-italic leading-normal tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal">{item.ratio}</span>
           <div data-node-label={item.labels[5]} className="size-16 flex absolute justify-center items-center left-[calc(50%_-_32px)] top-[calc(50%_-_32px)] max-[1100px]:size-14 max-[1100px]:left-[calc(50%_-_28px)] max-[1100px]:top-[calc(50%_-_28px)] max-[700px]:size-12 max-[700px]:left-[calc(50%_-_24px)] max-[700px]:top-[calc(50%_-_24px)] border-t [border-top-color:var(--nura-white)] border-b [border-bottom-color:var(--nura-white)] border-l [border-left-color:var(--nura-white)] border-r [border-right-color:var(--nura-white)] [color:var(--nura-white)] rounded-full">
@@ -163,7 +165,7 @@ function PortfolioPage() {
         }].map(item => <PortfolioCategoryItem key={item.ids[0]} item={item} />)}
   </div>
 </div>
-<div data-anchor="commercial" data-node-label="Commercial Video Gallery" className="block w-full pt-0 pb-[88px] [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:pb-12">
+<div id="commercial" data-node-label="Commercial Video Gallery" className="block w-full pt-0 pb-[88px] [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:pb-12">
   <div data-node-label="Commercial Section Content" className="flex w-full flex-col gap-8 max-[700px]:gap-6" data-artboard-style="ref-130">
     <div data-node-label="Commercial Gallery Heading" className="flex justify-between items-end gap-8 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-4">
       <h2 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-131">Commercial Ads</h2>
@@ -172,7 +174,7 @@ function PortfolioPage() {
     <div data-node-label="Commercial Video Grid" className="grid w-full grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)] gap-6 max-[700px]:grid-cols-1 max-[700px]:gap-7 max-[1100px]:gap-5">{portfolioVideoData["til.bas"].slice(0, 2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}<div data-node-label="Additional Commercial Slots" className="col-span-2 grid min-w-0 grid-cols-2 gap-6 max-[1100px]:gap-5 max-[700px]:col-span-1 max-[700px]:grid-cols-1 max-[700px]:gap-7">{portfolioVideoData["til.bas"].slice(2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}</div></div>
   </div>
 </div>
-<div data-anchor="ugc" data-node-label="Creator Video Gallery" className="block w-full [background-color:var(--nura-white)] border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
+<div id="ugc" data-node-label="Creator Video Gallery" className="block w-full [background-color:var(--nura-white)] border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
   <div data-node-label="Creator Section Content" className="flex w-full flex-col gap-8 max-[1100px]:gap-7" data-artboard-style="ref-133">
     <div data-node-label="Creator Gallery Heading" className="flex justify-between items-end gap-8 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-4">
       <h2 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-134">UGC Ads</h2>
@@ -181,7 +183,7 @@ function PortfolioPage() {
     <div data-node-label="Creator Video Grid" className="grid w-full grid-cols-4 max-[1100px]:grid-cols-2 gap-6 max-[1100px]:gap-5 max-[700px]:gap-[14px]">{portfolioVideoData["til.how"].slice(0, 2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}<div data-node-label="Additional Creator Slots" className="col-span-2 grid min-w-0 grid-cols-2 gap-6 max-[1100px]:gap-5 max-[700px]:gap-[14px]">{portfolioVideoData["til.how"].slice(2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}</div></div>
   </div>
 </div>
-<div data-anchor="motion" data-node-label="Motion Video Gallery" className="block w-full [background-color:var(--nura-white)] border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
+<div id="motion" data-node-label="Motion Video Gallery" className="block w-full [background-color:var(--nura-white)] border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
   <div data-node-label="Motion Section Content" className="flex w-full flex-col gap-8 max-[700px]:gap-6" data-artboard-style="ref-136">
     <div data-node-label="Motion Gallery Heading" className="flex justify-between items-end gap-8 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-4">
       <h2 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-137">Motion Design</h2>
