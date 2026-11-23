@@ -292,5 +292,19 @@
       "height": 1024,
       "bytes": 280034
     }
+  ],
+  "retro-office": [
+    {
+      "src": "/images/retro-office-400.webp",
+      "width": 400,
+      "height": 278,
+      "bytes": 30962
+    },
+    {
+      "src": "/images/retro-office-640.webp",
+      "width": 640,
+      "height": 444,
+      "bytes": 46752
+    }
   ]
 }

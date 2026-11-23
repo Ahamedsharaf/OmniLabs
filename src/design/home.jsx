@@ -6,13 +6,12 @@ import { WorkTogetherBand } from "./visuals";
 function Homepage() {
   return <>
   <section data-node-label="Cinematic Hero" aria-labelledby="home-heading" className="home-hero">
-    <div data-node-label="Golden Gate Feature Frame" className="home-hero-frame">
+    <div data-node-label="Homepage Feature Frame" className="home-hero-frame">
       <header data-node-label="Enterprise Masthead" className="home-hero-header">
         <SiteNavigation />
       </header>
-      <Artwork data-node-label="Golden Gate Hero Photograph" className="absolute inset-0 size-full"
-        image="golden-gate" sizes="max(100vw, 150svh)"
-        alternate={{ image: 'golden-gate-portrait', media: '(max-width: 639px) and (orientation: portrait)', sizes: 'max(100vw, 78svh)' }}
+      <Artwork data-node-label="Window-side Hero Photograph" className="absolute inset-0 size-full"
+        image="business-workspace" sizes="max(100vw, 178svh)"
         eager />
       <div data-node-label="Hero Contrast Scrim" className="home-hero-shade" aria-hidden="true" />
       <div data-node-label="Hero Message" className="grid relative w-full max-w-[1320px] items-end grid-cols-[1.5fr_0.8fr] z-[10] mx-auto my-0 gap-[38px] max-[960px]:flex max-[960px]:flex-col max-[960px]:items-start max-[960px]:gap-6" data-artboard-style="ref-2">
@@ -76,7 +75,7 @@ function Homepage() {
           <span data-node-label="Concept Solution Category" className="relative w-fit z-[10] [color:var(--nura-white)] [font-family:var(--omni-interface-font)] text-[13px] font-medium not-italic [-webkit-font-smoothing:antialiased] leading-tight tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal" data-artboard-style="ref-26">AI Agents &amp; Automation</span>
         </RouteAction>
         <RouteAction data-node-label="Business Challenge Concept" className="group flex relative w-full min-w-0 min-h-[440px] flex-col justify-between [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[18px] p-[22px] overflow-clip max-[1000px]:min-h-[338px] max-[639px]:min-h-[325px] cursor-pointer transition-opacity hover:opacity-85 active:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="software" aria-label={"Applications & Business Software"} data-artboard-style="ref-27">
-          <Artwork data-node-label="Laptop Work Photograph" className="absolute inset-0 size-full block max-w-full bg-cover bg-no-repeat [background-position:48%_50%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025] motion-reduce:transform-none" image="business-workspace" positionId="art-4" sizes="(max-width: 1100px) 600px, 785px"></Artwork>
+          <Artwork data-node-label="Retro Office Photograph" className="absolute inset-0 size-full block max-w-full bg-cover bg-no-repeat [background-position:48%_50%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025] motion-reduce:transform-none" image="retro-office" positionId="art-4" sizes="640px"></Artwork>
           <div data-node-label="Challenge Photograph Contrast" className="inset-0 block absolute [background-image:linear-gradient(180deg,_var(--omni-cinema-scrim)_0%,_var(--omni-cinema-soft)_27%,_var(--omni-clear-shade)_52%,_var(--omni-clear-shade)_65%,_var(--omni-cinema-scrim)_100%)]"></div>
           <div data-node-label="Challenge Concept Header" className="flex relative min-w-0 justify-between items-start z-[10] gap-[7px]" data-artboard-style="ref-28">
             <span data-node-label="Challenge Concept Title" className="max-w-[273px] [color:var(--nura-white)] [font-family:'ABC_Favorit',_Inter,_sans-serif] text-[35px] font-light not-italic [-webkit-font-smoothing:antialiased] leading-[1.055] tracking-[-1.925px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1000px]:text-[25px] max-[639px]:text-[30px] max-[900px]:tracking-[-0.9px]" data-artboard-style="ref-29">Build websites and business apps</span>
@@ -98,7 +97,7 @@ function Homepage() {
       </div>
       <div data-node-label="Solution Capability Grid" className="grid grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)] gap-[13px] max-[1110px]:grid-cols-2 max-[639px]:grid-cols-1">
         <RouteAction data-node-label="AI Creative Photo Panel" className="group flex relative min-w-0 min-h-[453px] flex-col justify-end [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[19px] p-[22px] overflow-clip max-[639px]:min-h-[392px] cursor-pointer transition-opacity hover:opacity-85 active:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="creative" aria-label={"AI Creative & Marketing"} data-artboard-style="ref-34">
-          <Artwork data-node-label="AI Creative Campaign Portrait" className="absolute inset-0 size-full block max-w-full bg-cover bg-no-repeat [background-position:50%_48%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025] motion-reduce:transform-none" image="creative-portrait" positionId="art-5" sizes="(max-width: 639px) calc(100vw - 44px), (max-width: 1100px) 45vw, 380px"></Artwork>
+          <Artwork data-node-label="AI Creative Film Set Photograph" className="absolute inset-0 size-full block max-w-full bg-cover bg-no-repeat [background-position:50%_48%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025] motion-reduce:transform-none" image="film-production" positionId="art-5" sizes="max(460px, 35vw)"></Artwork>
           <div data-node-label="Creative Photograph Contrast" className="inset-0 block absolute [background-image:linear-gradient(180deg,_var(--omni-clear-shade)_0%,_var(--omni-clear-shade)_51%,_var(--omni-cinema-soft)_72%,_var(--omni-cinema-scrim)_100%)]"></div>
           <div data-node-label="Creative Capability Title" className="flex relative flex-col z-[10] gap-[5px]" data-artboard-style="ref-35">
             <span data-node-label="AI Creative Heading" className="w-fit [color:var(--nura-white)] [font-family:'ABC_Favorit',_Inter,_sans-serif] text-4xl font-light not-italic [-webkit-font-smoothing:antialiased] leading-[1.04] tracking-[-1.98px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal" data-artboard-style="ref-36">AI Creative &amp; Marketing</span>

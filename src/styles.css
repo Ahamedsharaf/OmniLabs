@@ -47,7 +47,7 @@ main:focus,h1:focus,h2:focus { outline:none; }
   z-index:20;
   padding-inline:var(--hero-gutter);
 }
-[data-node-label="Golden Gate Hero Photograph"] .artwork-image {object-position:50% 28%;}
+[data-node-label="Window-side Hero Photograph"] .artwork-image {object-position:58% 48%;}
 .home-hero-shade {
   position:absolute;
   inset:0;
@@ -81,7 +81,7 @@ main:focus,h1:focus,h2:focus { outline:none; }
   }
 }
 @media (max-width:639px) and (orientation:portrait) {
-  [data-node-label="Golden Gate Hero Photograph"] .artwork-image {object-position:46% 48%;}
+  [data-node-label="Window-side Hero Photograph"] .artwork-image {object-position:60% 50%;}
 }
 .skip-link { position:fixed; z-index:100; top:10px; left:10px; transform:translateY(-150%); background:white; color:#151515; padding:12px 20px; border-radius:30px; }
 .skip-link:focus { transform:translateY(0); }

@@ -6,7 +6,7 @@ const template=await fs.readFile('dist/index.html','utf8');
 const escape=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 for(const route of [...routes,{path:'/404',title:'Page Not Found — Omni Labs',description:'The requested page could not be found.'}]) {
   const url=new URL(route.path,origin).href;
-  const head=`<link rel="canonical" href="${url}" /><meta property="og:url" content="${url}" /><meta property="og:image" content="${origin}/images/golden-gate-1536.webp" />${route.path==='/404'?'<meta name="robots" content="noindex" />':''}`;
+  const head=`<link rel="canonical" href="${url}" /><meta property="og:url" content="${url}" /><meta property="og:image" content="${origin}/images/business-workspace-1672.webp" />${route.path==='/404'?'<meta name="robots" content="noindex" />':''}`;
   const html=template.replace('<!--app-html-->',render(route.path))
     .replace(/<title>.*?<\/title>/,`<title>${escape(route.title)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*/,`$1${escape(route.description)}`)
