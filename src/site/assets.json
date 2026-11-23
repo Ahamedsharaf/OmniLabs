@@ -1,0 +1,226 @@
+{
+  "slate-light": [
+    {
+      "src": "/images/slate-light-480.webp",
+      "width": 480,
+      "height": 274,
+      "bytes": 5498
+    },
+    {
+      "src": "/images/slate-light-960.webp",
+      "width": 960,
+      "height": 549,
+      "bytes": 24238
+    },
+    {
+      "src": "/images/slate-light-1600.webp",
+      "width": 1600,
+      "height": 914,
+      "bytes": 79416
+    }
+  ],
+  "golden-gate": [
+    {
+      "src": "/images/golden-gate-480.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 45770
+    },
+    {
+      "src": "/images/golden-gate-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 175822
+    },
+    {
+      "src": "/images/golden-gate-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 445792
+    }
+  ],
+  "orange-motion": [
+    {
+      "src": "/images/orange-motion-480.webp",
+      "width": 480,
+      "height": 274,
+      "bytes": 8474
+    },
+    {
+      "src": "/images/orange-motion-960.webp",
+      "width": 960,
+      "height": 549,
+      "bytes": 29610
+    },
+    {
+      "src": "/images/orange-motion-1600.webp",
+      "width": 1600,
+      "height": 914,
+      "bytes": 103642
+    }
+  ],
+  "creative-workspace": [
+    {
+      "src": "/images/creative-workspace-480.webp",
+      "width": 480,
+      "height": 840,
+      "bytes": 45802
+    },
+    {
+      "src": "/images/creative-workspace-960.webp",
+      "width": 960,
+      "height": 1680,
+      "bytes": 130136
+    }
+  ],
+  "business-workspace": [
+    {
+      "src": "/images/business-workspace-480.webp",
+      "width": 480,
+      "height": 270,
+      "bytes": 22646
+    },
+    {
+      "src": "/images/business-workspace-960.webp",
+      "width": 960,
+      "height": 540,
+      "bytes": 60222
+    },
+    {
+      "src": "/images/business-workspace-1600.webp",
+      "width": 1600,
+      "height": 900,
+      "bytes": 124616
+    },
+    {
+      "src": "/images/business-workspace-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 133978
+    }
+  ],
+  "creative-portrait": [
+    {
+      "src": "/images/creative-portrait-480.webp",
+      "width": 480,
+      "height": 576,
+      "bytes": 21058
+    },
+    {
+      "src": "/images/creative-portrait-960.webp",
+      "width": 960,
+      "height": 1153,
+      "bytes": 62118
+    },
+    {
+      "src": "/images/creative-portrait-1600.webp",
+      "width": 1600,
+      "height": 1921,
+      "bytes": 154158
+    }
+  ],
+  "omni-logo-black": [
+    {
+      "src": "/images/omni-logo-black.webp",
+      "width": 2048,
+      "height": 573,
+      "bytes": 17406
+    }
+  ],
+  "forest-portrait": [
+    {
+      "src": "/images/forest-portrait-480.webp",
+      "width": 480,
+      "height": 840,
+      "bytes": 24318
+    },
+    {
+      "src": "/images/forest-portrait-960.webp",
+      "width": 960,
+      "height": 1680,
+      "bytes": 95846
+    }
+  ],
+  "studio-conversation": [
+    {
+      "src": "/images/studio-conversation-480.webp",
+      "width": 480,
+      "height": 160,
+      "bytes": 10598
+    },
+    {
+      "src": "/images/studio-conversation-960.webp",
+      "width": 960,
+      "height": 320,
+      "bytes": 35010
+    },
+    {
+      "src": "/images/studio-conversation-1600.webp",
+      "width": 1600,
+      "height": 533,
+      "bytes": 89908
+    },
+    {
+      "src": "/images/studio-conversation-2048.webp",
+      "width": 2048,
+      "height": 682,
+      "bytes": 146152
+    }
+  ],
+  "film-production": [
+    {
+      "src": "/images/film-production-480.webp",
+      "width": 480,
+      "height": 480,
+      "bytes": 60144
+    },
+    {
+      "src": "/images/film-production-736.webp",
+      "width": 736,
+      "height": 736,
+      "bytes": 116090
+    }
+  ],
+  "agents-film": [
+    {
+      "src": "/images/agents-film-480.webp",
+      "width": 480,
+      "height": 361,
+      "bytes": 53044
+    },
+    {
+      "src": "/images/agents-film-735.webp",
+      "width": 735,
+      "height": 553,
+      "bytes": 95542
+    }
+  ],
+  "omni-logo-white": [
+    {
+      "src": "/images/omni-logo-white.webp",
+      "width": 2048,
+      "height": 573,
+      "bytes": 17410
+    }
+  ],
+  "monochrome-motion": [
+    {
+      "src": "/images/monochrome-motion-480.webp",
+      "width": 480,
+      "height": 274,
+      "bytes": 7020
+    },
+    {
+      "src": "/images/monochrome-motion-960.webp",
+      "width": 960,
+      "height": 549,
+      "bytes": 31880
+    },
+    {
+      "src": "/images/monochrome-motion-1600.webp",
+      "width": 1600,
+      "height": 914,
+      "bytes": 100194
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[data-art-position="art-0"]>.artwork-image{object-position:50% 30%}
+[data-art-position="art-1"]>.artwork-image{object-position:50% 25%}
+[data-art-position="art-2"]>.artwork-image{object-position:50% 50%}
+[data-art-position="art-3"]>.artwork-image{object-position:50% 47%}
+[data-art-position="art-4"]>.artwork-image{object-position:48% 50%}
+[data-art-position="art-5"]>.artwork-image{object-position:50% 48%}
+[data-art-position="art-6"]>.artwork-image{object-position:50% 50%}
+[data-art-position="art-7"]>.artwork-image{object-position:50% 48%}
+@media(max-width:639px){[data-art-position="art-7"]>.artwork-image{object-position:54% 50%}}
+[data-art-position="art-8"]>.artwork-image{object-position:53% 56%}
+@media(max-width:639px){[data-art-position="art-8"]>.artwork-image{object-position:46% 50%}}
+[data-art-position="art-9"]>.artwork-image{object-position:50% 50%}
+[data-art-position="art-10"]>.artwork-image{object-position:50% 84%}
+[data-art-position="art-11"]>.artwork-image{object-position:50% 50%}

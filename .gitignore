@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.prerender/
+.deploy/
+.qa/
+.cloudflare/
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo

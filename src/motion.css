@@ -1,0 +1,17 @@
+@keyframes omni-arrive {from {opacity:0;transform:translateY(22px);} to {opacity:1;transform:translateY(0);}}
+@keyframes omni-image-drift {from {transform:scale(1.035);} to {transform:scale(1);}}
+@keyframes omni-nav-arrive {from {opacity:0;transform:translateY(-8px);} to {opacity:1;transform:translateY(0);}}
+
+@media(prefers-reduced-motion:no-preference) {
+  [data-node-label="Golden Gate Hero Photograph"]>.artwork-image {animation:omni-image-drift 16s cubic-bezier(.16,1,.3,1) both;transform-origin:48% 50%;}
+  [data-node-label="Enterprise Masthead"] {animation:omni-nav-arrive .8s cubic-bezier(.22,1,.36,1) .1s both;}
+  [data-node-label="Hero First Line"] {animation:omni-arrive 1s cubic-bezier(.22,1,.36,1) .1s both;}
+  [data-node-label="Hero Second Line"] {animation:omni-arrive 1s cubic-bezier(.22,1,.36,1) .22s both;}
+  [data-node-label="Hero Supporting Copy"] {animation:omni-arrive 1s cubic-bezier(.22,1,.36,1) .34s both;}
+  [data-node-label="Hero Actions"] {animation:omni-arrive 1s cubic-bezier(.22,1,.36,1) .44s both;}
+  .motion-reveal {opacity:0;transform:translateY(24px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1);}
+  .motion-reveal.is-visible {opacity:1;transform:translateY(0);}
+  [data-node-label="Business Challenge Concept"]>[data-art-position], [data-node-label$="Video Space"]>[data-node-label$="Poster Artwork"] {transition:transform .7s cubic-bezier(.22,1,.36,1);}
+  [data-node-label="Business Challenge Concept"]:hover>[data-art-position], [data-node-label$="Video Space"]:hover>[data-node-label$="Poster Artwork"] {transform:scale(1.035);}
+  [data-node-label="Business Challenge Concept"]:hover [data-node-label="Concept Link Arrow"] {transform:translate(2px,-2px);transition:transform .25s ease;}
+}
