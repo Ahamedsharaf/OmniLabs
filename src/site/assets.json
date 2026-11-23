@@ -332,5 +332,57 @@
       "height": 2160,
       "bytes": 289266
     }
+  ],
+  "creative-film-still": [
+    {
+      "src": "/images/creative-film-still-720.webp",
+      "width": 720,
+      "height": 550,
+      "bytes": 33306
+    },
+    {
+      "src": "/images/creative-film-still-1440.webp",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 83916
+    },
+    {
+      "src": "/images/creative-film-still-3840.webp",
+      "width": 3840,
+      "height": 2933,
+      "bytes": 273374
+    },
+    {
+      "src": "/images/creative-film-still-7680.webp",
+      "width": 7680,
+      "height": 5867,
+      "bytes": 655192
+    }
+  ],
+  "retro-office-restored": [
+    {
+      "src": "/images/retro-office-restored-720.webp",
+      "width": 720,
+      "height": 499,
+      "bytes": 62276
+    },
+    {
+      "src": "/images/retro-office-restored-1440.webp",
+      "width": 1440,
+      "height": 998,
+      "bytes": 200654
+    },
+    {
+      "src": "/images/retro-office-restored-3840.webp",
+      "width": 3840,
+      "height": 2662,
+      "bytes": 685614
+    },
+    {
+      "src": "/images/retro-office-restored-7680.webp",
+      "width": 7680,
+      "height": 5324,
+      "bytes": 1564428
+    }
   ]
 }

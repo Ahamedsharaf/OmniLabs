@@ -105,7 +105,7 @@ function PageBody({
               "name": "AI Creative & Marketing",
               "desc": "Commercials, campaign strategy, product imagery, and marketing systems.",
               "route": "creative",
-              "image": "/images/film-production-736.webp"
+              "image": "/images/creative-film-still-1440.webp"
             }, {
               "name": "AI Agents & Automation",
               "desc": "Customer assistants, connected workflows, and knowledge systems.",
@@ -115,7 +115,7 @@ function PageBody({
               "name": "Applications & Business Software",
               "desc": "Websites, mobile applications, and software tailored to your operations.",
               "route": "software",
-              "image": "/images/retro-office-1280.webp"
+              "image": "/images/retro-office-restored-1440.webp"
             }].map(row => <RouteAction key={row.route} data-node-label="Service Image Card" to={row.route} className="group min-w-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]"><div data-node-label="Service Card Photograph" className="relative w-full aspect-[4/3] rounded-[18px] overflow-hidden bg-cover bg-center transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025] motion-reduce:transform-none" style={{
                 backgroundImage: "url(" + row.image + ")"
               }}></div><div data-node-label="Service Card Details" className="flex flex-col gap-3 pt-5"><span data-node-label="Service Card Name" className="block text-[27px] leading-[1.12] tracking-[-0.9px]">{row.name}</span><span data-node-label="Service Card Description" className="block text-base leading-[1.6] [color:var(--omni-muted)]">{row.desc}</span><span data-node-label="Service Card Action" className="block text-sm font-medium mt-1 group-hover:underline underline-offset-4">Explore service ↗</span></div></RouteAction>)}</div><div data-node-label="Project Conversation" className="flex items-center justify-between gap-6 border-t [border-color:var(--omni-line)] pt-9 mt-10 max-[700px]:flex-col max-[700px]:items-start"><span data-node-label="Project Conversation Heading" className="block font-light leading-[1.1] text-[44px] tracking-[-1.9px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px] [color:var(--nura-ink)]">Have a project in mind?</span><RouteAction data-node-label="Page Action" to="contact-page" className="inline-flex w-fit min-h-12 items-center justify-center px-5 rounded-full text-sm font-medium [background-color:var(--nura-ink)] [color:var(--nura-white)] cursor-pointer transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]"><span data-node-label="Action Text" className="block leading-[1.35]">Start a conversation</span></RouteAction></div></div></div>;
