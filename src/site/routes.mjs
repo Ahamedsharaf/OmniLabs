@@ -1,5 +1,5 @@
 export const routes = [
-  { id:'home', path:'/', title:'Omni Labs — Build what’s next. Make it work.', description:'Omni Labs helps businesses grow and operate better through creative marketing, intelligent AI agents and custom business software.' },
+  { id:'home', path:'/', title:'Omni Labs | AI Systems for Enterprise', description:'Omni Labs helps businesses grow and operate better through creative marketing, intelligent AI agents and custom business software.' },
   { id:'solutions', path:'/solutions', title:'Solutions — Omni Labs', description:'Creative marketing, AI agents and custom software, built around your business.' },
   { id:'creative', path:'/solutions/creative-marketing', title:'AI Creative & Marketing — Omni Labs', description:'AI commercials, brand films, product imagery, campaign strategy and marketing systems for your business.' },
   { id:'agents', path:'/solutions/agents-automation', title:'AI Agents & Automation — Omni Labs', description:'Customer assistants, connected workflows, knowledge retrieval and automation with human oversight.' },

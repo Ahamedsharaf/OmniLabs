@@ -384,5 +384,19 @@
       "height": 5324,
       "bytes": 1564428
     }
+  ],
+  "business-workspace-phone": [
+    {
+      "src": "/images/business-workspace-phone-540.webp",
+      "width": 540,
+      "height": 565,
+      "bytes": 39108
+    },
+    {
+      "src": "/images/business-workspace-phone-900.webp",
+      "width": 900,
+      "height": 941,
+      "bytes": 89450
+    }
   ]
 }

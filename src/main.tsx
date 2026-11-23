@@ -1,7 +1,11 @@
 import { StrictMode } from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import { App } from './App';
+import { loadPageView } from './site/page-views';
+import { routeForPath } from './site/routes.mjs';
 import './styles.css';
 const root=document.getElementById('root')!;
-const app=<StrictMode><App initialPath={window.location.pathname+window.location.hash}/></StrictMode>;
+const route = routeForPath(window.location.pathname);
+const view = route ? await loadPageView(route.id) : null;
+const app=<StrictMode><App initialPath={window.location.pathname+window.location.hash} initialView={view}/></StrictMode>;
 if(root.querySelector('main'))hydrateRoot(root,app);else createRoot(root).render(app);

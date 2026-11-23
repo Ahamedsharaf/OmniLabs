@@ -19,6 +19,7 @@ function ProjectFrame() {
     <div className="project-dots project-dots-left" />
     <div className="project-dots project-dots-right" />
     <div className="project-outline" />
+    <span className="project-trace" />
     {['top-left', 'top-right', 'bottom-left', 'bottom-right'].map(corner => (
       <span className={`project-corner project-corner-${corner}`} key={corner} />
     ))}

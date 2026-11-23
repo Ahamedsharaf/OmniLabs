@@ -9,7 +9,7 @@ type Props = HTMLAttributes<HTMLDivElement> & {
   positionId?: string;
   eager?: boolean;
   sizes?: string;
-  alternate?: PictureSource;
+  sources?: PictureSource[];
 };
 
 function srcSet(image: ArtworkName) {
@@ -18,7 +18,7 @@ function srcSet(image: ArtworkName) {
 
 export function Artwork({
   image, positionId, className, fit = 'cover', eager = false,
-  sizes = '(max-width: 700px) 100vw, 50vw', alternate, ...props
+  sizes = '(max-width: 700px) 100vw, 50vw', sources, ...props
 }: Props) {
   const source = assets[image].at(-1)!;
   const picture = (
@@ -31,9 +31,11 @@ export function Artwork({
   return (
     <div {...props} className={className ? `artwork-frame ${className}` : 'artwork-frame'}
       data-art-position={positionId}>
-      {alternate ? (
+      {sources?.length ? (
         <picture>
-          <source media={alternate.media} srcSet={srcSet(alternate.image)} sizes={alternate.sizes} />
+          {sources.map(source => (
+            <source key={source.media} media={source.media} srcSet={srcSet(source.image)} sizes={source.sizes} />
+          ))}
           {picture}
         </picture>
       ) : picture}
