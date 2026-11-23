@@ -4,7 +4,7 @@ export const routes = [
   { id:'creative', path:'/solutions/creative-marketing', title:'AI Creative & Marketing — Omni Labs', description:'AI commercials, brand films, product imagery, campaign strategy and marketing systems for your business.' },
   { id:'agents', path:'/solutions/agents-automation', title:'AI Agents & Automation — Omni Labs', description:'Customer assistants, connected workflows, knowledge retrieval and automation with human oversight.' },
   { id:'software', path:'/solutions/business-software', title:'Applications & Business Software — Omni Labs', description:'Websites, mobile apps and custom business software tailored to your operations.' },
-  { id:'portfolio', path:'/portfolio', title:'Portfolio — Omni Labs', description:'Explore the creative directions for commercial films, creator-style ads and motion design at Omni Labs.' },
+  { id:'portfolio', path:'/portfolio', title:'Portfolio — Omni Labs', description:'Browse Omni Labs’ creative video concepts and case study sections for AI agents, automation, and business software.' },
   { id:'workflow', path:'/workflow', title:'Our Workflow — Omni Labs', description:'From first idea to working business: discover, design, build, review, launch and improve.' },
   { id:'industries', path:'/industries', title:'Industries — Omni Labs', description:'Practical applications for retail, hospitality, real estate, professional services, growing businesses and enterprise teams.' },
   { id:'retail', path:'/industries/retail-ecommerce', title:'Retail & E-commerce — Omni Labs', description:'Connect product content, customer support and retail operations.' },

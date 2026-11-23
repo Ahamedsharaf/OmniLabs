@@ -19,10 +19,10 @@ function WorkWithUsPage() {
           </div>
         </div>
       </header>
-      <section data-node-label="Project Starting Points" className="block w-full [background-color:var(--omni-paper)] px-[60px] py-[76px] max-[1100px]:px-10 max-[1100px]:py-14 max-[700px]:px-[22px] max-[700px]:py-12">
+      <section id="starting-points" data-node-label="Project Starting Points" className="block w-full [background-color:var(--omni-paper)] px-[60px] py-[76px] max-[1100px]:px-10 max-[1100px]:py-14 max-[700px]:px-[22px] max-[700px]:py-12">
         <div data-node-label="Starting Points Layout" className="grid w-full max-w-[1200px] mx-auto items-start grid-cols-[minmax(0px,_0.8fr)_minmax(0px,_1.2fr)] gap-[82px] max-[1100px]:gap-10 max-[850px]:grid-cols-1 max-[700px]:gap-8">
           <div data-node-label="Starting Points Introduction" className="flex min-w-0 flex-col items-start gap-3" data-artboard-style="ref-159">
-            <h2 data-node-label="Starting Points Heading" className="block max-w-[420px] [color:var(--nura-ink)] text-[42px] font-light leading-[1.08] tracking-[-1.9px] max-[700px]:max-w-[275px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.2px]">Where to start</h2>
+            <h2 tabIndex={-1} data-node-label="Starting Points Heading" className="block max-w-[420px] [color:var(--nura-ink)] text-[42px] font-light leading-[1.08] tracking-[-1.9px] max-[700px]:max-w-[275px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.2px]">Where to start</h2>
             <RouteAction data-node-label="Workflow Text Link" to="workflow" className="inline-flex min-h-11 w-fit items-center border-b [border-bottom-color:var(--nura-ink)] [color:var(--nura-ink)] cursor-pointer hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-4" data-artboard-style="ref-160">
               <span data-node-label="Workflow Link Text" className="block w-fit text-[15px] font-medium leading-[1.4] [color:var(--nura-ink)]" data-artboard-style="ref-161">See our workflow</span>
             </RouteAction>

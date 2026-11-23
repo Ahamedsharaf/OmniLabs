@@ -2,7 +2,7 @@ import type { HTMLAttributes, ReactNode, MouseEvent } from 'react';
 import { routeHref } from '../site/routes.mjs';
 import { useSite, type Overlay } from '../site/runtime';
 type Props = HTMLAttributes<HTMLElement> & { to:string; children?:ReactNode; 'data-node-label'?:string };
-const overlays = new Set(['menu','contact','industries-menu']);
+const overlays = new Set(['menu','contact']);
 
 export function RouteAction({to,children,onClick,onPointerEnter,...props}:Props) {
   const site = useSite();

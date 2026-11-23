@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { SiteFooter } from './design/footer';
-import { ExpandedNavigation } from './design/navigation';
 import { ContactForm } from './components/ContactForm';
 import { MobileMenu } from './components/MobileMenu';
 import { BookingLink } from './components/BookingLink';
@@ -89,7 +88,7 @@ export function App({ initialPath, initialView }: { initialPath: string; initial
     if(element) {
       const jumpImmediately = first.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       element.scrollIntoView({ behavior:jumpImmediately ? 'instant' : 'smooth', block:'start' });
-      element.querySelector<HTMLElement>('h2,input')?.focus({preventScroll:true});
+      element.querySelector<HTMLElement>('h2,h3,input')?.focus({preventScroll:true});
     } else if(!first.current) {
       window.scrollTo({top:0,behavior:'instant'});document.querySelector<HTMLElement>('main h1')?.focus({preventScroll:true});
     }
@@ -115,7 +114,7 @@ export function App({ initialPath, initialView }: { initialPath: string; initial
     </main>
     <SiteFooter screen={route?.id||'home'}/>
     <dialog ref={dialog} className="site-dialog" data-kind={overlay?.kind} aria-label={overlay?.kind==='media'?`${overlay.item.title} preview`:overlay?.kind==='contact'?'Contact Omni Labs':'Navigation menu'} onCancel={e=>{e.preventDefault();close();}} onClick={e=>{if(e.target===e.currentTarget)close();}}>
-      {overlay?.kind==='menu'?<MobileMenu/>:overlay?.kind==='contact'?<ContactForm screen={route?.id}/>:overlay?.kind==='industries-menu'?<ExpandedNavigation/>:overlay?.kind==='media'?<div className="media-dialog">
+      {overlay?.kind==='menu'?<MobileMenu/>:overlay?.kind==='contact'?<ContactForm screen={route?.id}/>:overlay?.kind==='media'?<div className="media-dialog">
         <div className="media-dialog-head"><h2>{overlay.item.title}</h2><button type="button" className="circle-button" data-dialog-close aria-label="Close preview" onClick={close}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
         <img src={assets[overlay.item.image].at(-1)?.src} alt={`${overlay.item.title} concept poster`} width="960" height="540"/>
         <p>This is a concept poster. A video has not been supplied for this preview.</p><BookingLink className="booking-link"/>

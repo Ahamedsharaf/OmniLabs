@@ -1,0 +1,90 @@
+.portfolio-collections {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  border-block:1px solid var(--omni-line);
+}
+
+.portfolio-collection-link {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-content:center;
+  align-items:center;
+  gap:6px 12px;
+  min-height:80px;
+  padding:14px 20px;
+  color:var(--nura-ink);
+  transition:background-color .2s ease;
+}
+
+.portfolio-collection-link + .portfolio-collection-link {
+  border-inline-start:1px solid var(--omni-line);
+}
+
+.portfolio-collection-link:hover,.portfolio-collection-link:focus-visible {
+  background:var(--omni-paper);
+}
+
+.portfolio-collection-link:focus-visible {
+  outline-offset:-3px;
+}
+
+.portfolio-collection-format {
+  grid-column:1;
+  color:var(--omni-muted);
+  font-size:13px;
+}
+
+.portfolio-collection-arrow {
+  grid-column:2;
+  grid-row:1 / span 2;
+  color:#356352;
+  transition:transform .2s var(--entrance-ease);
+}
+
+.portfolio-collection-link:hover .portfolio-collection-arrow {
+  transform:translate(2px,-2px);
+}
+
+.portfolio-collection-title {
+  font-size:clamp(30px,3.2vw,48px);
+  font-weight:300;
+  line-height:1.08;
+  letter-spacing:-.04em;
+}
+
+.portfolio-creative-intro {
+  padding-bottom:36px;
+}
+
+.portfolio-creative-intro h2 {
+  margin-bottom:26px;
+}
+
+.portfolio-case-studies {
+  border-block-start:1px solid var(--omni-line);
+  background:var(--omni-paper);
+}
+
+.portfolio-case-study-intro {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,.6fr);
+  align-items:end;
+  gap:18px 52px;
+}
+
+.portfolio-case-study-intro .portfolio-collection-format {
+  display:block;
+  margin-block-end:8px;
+}
+
+.portfolio-case-study-status p {
+  color:var(--omni-muted);
+  margin-block-end:12px;
+}
+
+@media (max-width:700px) {
+  .portfolio-collections,.portfolio-case-study-intro {grid-template-columns:1fr;}
+  .portfolio-collection-link {min-height:64px;padding-inline:12px;}
+  .portfolio-collection-link + .portfolio-collection-link {border-inline-start:0;border-block-start:1px solid var(--omni-line);}
+  .portfolio-creative-intro {padding-bottom:28px;}
+}

@@ -125,13 +125,13 @@ function WorkflowPage() {
     <span data-node-label="Workflow Hero Copy" className="w-fit max-w-[480px] [color:var(--omni-light-copy)] [font-family:var(--omni-interface-font)] text-lg font-normal not-italic leading-normal tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-base" data-artboard-style="ref-149">A clear process, with reviews at the moments that matter.</span>
   </div>
 </div>
-<div data-node-label="Workflow Visual Overview" className="block w-full [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
+<div id="process" data-node-label="Workflow Visual Overview" className="block w-full [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
   <h2 tabIndex={-1} data-node-label="Workflow Visual Heading" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-5xl font-light not-italic leading-[1.1] tracking-[-2px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[40px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" data-artboard-style="ref-150">How the work comes together.</h2>
   <div data-node-label="Workflow Visual Cards" className="grid grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)] mt-9 mb-0 mx-0 gap-6 max-[1100px]:grid-cols-1 max-[1100px]:gap-5">
     {workflowVisualData.map(item => <WorkflowVisualCard key={item.ids[0]} item={item} />)}
   </div>
 </div>
-<div data-node-label="Workflow Editorial Detail" className="block w-full pt-0 pb-[88px] [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:pb-12">
+<div id="building" data-node-label="Workflow Editorial Detail" className="block w-full pt-0 pb-[88px] [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:pb-12">
   <div data-node-label="Workflow Editorial Layout" className="grid grid-cols-[1.55fr_0.8fr] pt-[72px] pb-0 border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] px-0 gap-20 max-[1100px]:grid-cols-1 max-[1100px]:gap-10 max-[1100px]:pt-12">
     <div data-node-label="Workflow Narrative" className="block min-w-0">
       <h2 tabIndex={-1} data-node-label="Workflow Narrative Heading" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[44px] font-light not-italic leading-[1.1] tracking-[-1.6px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[40px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" data-artboard-style="ref-151">Building it</h2>

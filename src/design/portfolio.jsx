@@ -3,6 +3,9 @@ import { VideoPreview } from "../components/VideoPreview";
 import { Artwork } from "../components/Artwork";
 import { RouteAction } from "../components/RouteAction";
 import { SiteNavigation } from "./navigation";
+import { portfolioCollections } from "../site/portfolio-collections";
+
+const [creativeCollection, ...caseStudyCollections] = portfolioCollections;
 const portfolioVideoData = {
   "til.bas": [{
     "ids": ["til.lob", "til.pen", "til.sky", "til.few", "til.fan", "til.eyn", "til.sob", "til.las", "til.ron", "til.zig", "til.bbw"],
@@ -136,6 +139,24 @@ function PortfolioCategoryItem({
       <span data-node-label="Portfolio Category Count" className="w-fit [color:var(--omni-muted)] [font-family:var(--omni-mono-font)] text-[13px] font-normal not-italic leading-normal tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal">{item.text[1]}</span>
     </RouteAction>;
 }
+function PortfolioCaseStudies({ collection }) {
+  const { id, title, format, service } = collection;
+  return <section id={id} aria-labelledby={id + "-heading"} className="portfolio-case-studies px-[60px] py-[72px] max-[1100px]:px-10 max-[1100px]:py-12 max-[700px]:px-[22px]">
+    <div className="portfolio-case-study-intro max-w-[1320px] mx-auto">
+      <div>
+        <span className="portfolio-collection-format">{format}</span>
+        <h2 id={id + "-heading"} tabIndex={-1} className="portfolio-collection-title">{title}</h2>
+      </div>
+      <div className="portfolio-case-study-status">
+        <p>Case studies will appear here when published.</p>
+        <RouteAction to={service} className="text-link" aria-label={"Explore " + title}>
+          Explore the service <span aria-hidden="true">↗</span>
+        </RouteAction>
+      </div>
+    </div>
+  </section>;
+}
+
 function PortfolioPage() {
   return <div data-node-label="Portfolio Desktop" className="flex w-full min-w-0 flex-col [font-family:var(--omni-interface-font)] [background-color:var(--nura-white)] [color:var(--nura-ink)]"><div data-node-label="Portfolio Introduction" className="block w-full pt-0 pb-12 [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[700px]:pb-9">
   <div data-node-label="Studio Header" className="relative z-[10] min-h-[88px] max-[1100px]:min-h-[72px]"><SiteNavigation light={true} /></div>
@@ -147,9 +168,22 @@ function PortfolioPage() {
         <span data-node-label="Portfolio Second Line" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[88px] font-light not-italic leading-none tracking-[-4.1px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[68px] max-[1100px]:tracking-[-3.2px] max-[700px]:text-[48px] max-[700px]:tracking-[-2.2px] max-[700px]:leading-[1.02]" data-artboard-style="ref-128">in motion.</span>
       </h1>
     </div>
-    <span data-node-label="Portfolio Introduction Copy" className="max-w-[340px] pt-0 pb-2 [color:var(--omni-muted)] [font-family:var(--omni-interface-font)] text-lg font-normal not-italic leading-normal tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal px-0 max-[1100px]:text-base max-[1100px]:pb-0" data-artboard-style="ref-129">Commercial films, creator-style ads, and motion design.</span>
+    <span data-node-label="Portfolio Introduction Copy" className="max-w-[340px] pt-0 pb-2 [color:var(--omni-muted)] [font-family:var(--omni-interface-font)] text-lg font-normal not-italic leading-normal tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal px-0 max-[1100px]:text-base max-[1100px]:pb-0" data-artboard-style="ref-129">Commercial films, creator-style ads, and motion design, alongside case study sections for AI automation and business software.</span>
   </div>
-  <div data-node-label="Portfolio Category Navigation" className="grid grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)] border-t [border-top-color:var(--omni-line)] border-b [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] px-0 py-5 gap-6 max-[1100px]:gap-5 max-[700px]:gap-3">
+  <nav className="portfolio-collections" aria-label="Portfolio collections">
+    {portfolioCollections.map(({ id, title, format }) => (
+      <RouteAction key={id} to={"portfolio:" + id} className="portfolio-collection-link">
+        <span>{title}</span>
+        <span className="portfolio-collection-format">{format}</span>
+        <span className="portfolio-collection-arrow" aria-hidden="true">↘</span>
+      </RouteAction>
+    ))}
+  </nav>
+</div>
+<section id={creativeCollection.id} aria-labelledby="creative-portfolio-heading">
+<div className="portfolio-creative-intro px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px]">
+  <h2 id="creative-portfolio-heading" tabIndex={-1} className="portfolio-collection-title">{creativeCollection.title}</h2>
+  <nav aria-label="Creative video categories" data-node-label="Portfolio Category Navigation" className="grid grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)] border-t [border-top-color:var(--omni-line)] border-b [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] px-0 py-5 gap-6 max-[1100px]:gap-5 max-[700px]:gap-3">
     {[{
           "ids": ["til.bbs", "til.web", "til.caw"],
           "text": ["Commercial Ads", "04"],
@@ -163,12 +197,12 @@ function PortfolioPage() {
           "text": ["Motion Design", "04"],
           "route": "motion"
         }].map(item => <PortfolioCategoryItem key={item.ids[0]} item={item} />)}
-  </div>
+  </nav>
 </div>
 <div id="commercial" data-node-label="Commercial Video Gallery" className="block w-full pt-0 pb-[88px] [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:pb-12">
   <div data-node-label="Commercial Section Content" className="flex w-full flex-col gap-8 max-[700px]:gap-6" data-artboard-style="ref-130">
     <div data-node-label="Commercial Gallery Heading" className="flex justify-between items-end gap-8 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-4">
-      <h2 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-131">Commercial Ads</h2>
+      <h3 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-131">Commercial Ads</h3>
       <span data-node-label="Gallery Category Description" className="w-fit max-w-[390px] [color:var(--omni-muted)] [font-family:var(--omni-interface-font)] text-base font-normal not-italic leading-[1.55] tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal" data-artboard-style="ref-132">Brand stories, product launches, and campaign films.</span>
     </div>
     <div data-node-label="Commercial Video Grid" className="grid w-full grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)] gap-6 max-[700px]:grid-cols-1 max-[700px]:gap-7 max-[1100px]:gap-5">{portfolioVideoData["til.bas"].slice(0, 2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}<div data-node-label="Additional Commercial Slots" className="col-span-2 grid min-w-0 grid-cols-2 gap-6 max-[1100px]:gap-5 max-[700px]:col-span-1 max-[700px]:grid-cols-1 max-[700px]:gap-7">{portfolioVideoData["til.bas"].slice(2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}</div></div>
@@ -177,7 +211,7 @@ function PortfolioPage() {
 <div id="ugc" data-node-label="Creator Video Gallery" className="block w-full [background-color:var(--nura-white)] border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
   <div data-node-label="Creator Section Content" className="flex w-full flex-col gap-8 max-[1100px]:gap-7" data-artboard-style="ref-133">
     <div data-node-label="Creator Gallery Heading" className="flex justify-between items-end gap-8 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-4">
-      <h2 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-134">UGC Ads</h2>
+      <h3 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-134">UGC Ads</h3>
       <span data-node-label="Gallery Category Description" className="w-fit max-w-[390px] [color:var(--omni-muted)] [font-family:var(--omni-interface-font)] text-base font-normal not-italic leading-[1.55] tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal" data-artboard-style="ref-135">Creator-style stories made for social feeds.</span>
     </div>
     <div data-node-label="Creator Video Grid" className="grid w-full grid-cols-4 max-[1100px]:grid-cols-2 gap-6 max-[1100px]:gap-5 max-[700px]:gap-[14px]">{portfolioVideoData["til.how"].slice(0, 2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}<div data-node-label="Additional Creator Slots" className="col-span-2 grid min-w-0 grid-cols-2 gap-6 max-[1100px]:gap-5 max-[700px]:gap-[14px]">{portfolioVideoData["til.how"].slice(2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}</div></div>
@@ -186,12 +220,14 @@ function PortfolioPage() {
 <div id="motion" data-node-label="Motion Video Gallery" className="block w-full [background-color:var(--nura-white)] border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12">
   <div data-node-label="Motion Section Content" className="flex w-full flex-col gap-8 max-[700px]:gap-6" data-artboard-style="ref-136">
     <div data-node-label="Motion Gallery Heading" className="flex justify-between items-end gap-8 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-4">
-      <h2 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-137">Motion Design</h2>
+      <h3 data-node-label="Gallery Category Title" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[40px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" tabIndex={-1} data-artboard-style="ref-137">Motion Design</h3>
       <span data-node-label="Gallery Category Description" className="w-fit max-w-[390px] [color:var(--omni-muted)] [font-family:var(--omni-interface-font)] text-base font-normal not-italic leading-[1.55] tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal" data-artboard-style="ref-138">Brand movement, explainers, and product stories.</span>
     </div>
     <div data-node-label="Motion Video Grid" className="grid w-full grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)] gap-6 max-[700px]:grid-cols-1 max-[700px]:gap-7 max-[1100px]:gap-5">{portfolioVideoData["til.nov"].slice(0, 2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}<div data-node-label="Additional Motion Slots" className="col-span-2 grid min-w-0 grid-cols-2 gap-6 max-[1100px]:gap-5 max-[700px]:col-span-1 max-[700px]:grid-cols-1 max-[700px]:gap-7">{portfolioVideoData["til.nov"].slice(2).map(item => <PortfolioVideoCard key={item.ids[0]} item={item} />)}</div></div>
   </div>
 </div>
+</section>
+{caseStudyCollections.map(collection => <PortfolioCaseStudies key={collection.id} collection={collection} />)}
 <div data-node-label="Portfolio Workflow Link" className="block w-full pt-3 pb-[72px] [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:pb-12" data-artboard-style="ref-139">
   <div data-node-label="Portfolio Workflow Content" className="flex justify-between items-center pt-10 pb-0 border-t [border-top-color:var(--omni-line)] [border-bottom-color:var(--omni-line)] [border-left-color:var(--omni-line)] [border-right-color:var(--omni-line)] px-0 gap-8 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-6 max-[1100px]:pt-8" data-artboard-style="ref-140">
     <span data-node-label="Portfolio Workflow Heading" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[44px] font-light not-italic leading-[1.1] tracking-[-1.8px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[36px] max-[700px]:text-[32px] max-[700px]:tracking-[-1.3px]" data-artboard-style="ref-141">From idea to delivery.</span>
