@@ -12,6 +12,11 @@ function Homepage() {
       </header>
       <Artwork data-node-label="Window-side Hero Photograph" className="absolute inset-0 size-full"
         image="business-workspace" sizes="max(100vw, 178svh)"
+        alternate={{
+          image: 'business-workspace-4k',
+          media: '(min-width: 2000px), (min-width: 1100px) and (min-resolution: 1.5dppx)',
+          sizes: 'max(100vw, 178svh)',
+        }}
         eager />
       <div data-node-label="Hero Contrast Scrim" className="home-hero-shade" aria-hidden="true" />
       <div data-node-label="Hero Message" className="grid relative w-full max-w-[1320px] items-end grid-cols-[1.5fr_0.8fr] z-[10] mx-auto my-0 gap-[38px] max-[960px]:flex max-[960px]:flex-col max-[960px]:items-start max-[960px]:gap-6" data-artboard-style="ref-2">

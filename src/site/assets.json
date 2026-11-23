@@ -306,5 +306,13 @@
       "height": 444,
       "bytes": 46752
     }
+  ],
+  "business-workspace-4k": [
+    {
+      "src": "/images/business-workspace-3840.webp",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 289266
+    }
   ]
 }
