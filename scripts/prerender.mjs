@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import { pageEntry, render } from '../.prerender/entry-server.js';
 import { routes } from '../src/site/routes.mjs';
 import { homeHero } from '../src/site/home-hero.mjs';
-const origin=process.env.VITE_SITE_URL || 'https://omnilabs.ahamedsaraf18.workers.dev';
+const origin=process.env.VITE_SITE_URL || 'https://orsenlabs.ahamedsaraf18.workers.dev';
 const template=await fs.readFile('dist/index.html','utf8');
 const manifest=JSON.parse(await fs.readFile('dist/.vite/manifest.json','utf8'));
 const assets=JSON.parse(await fs.readFile('src/site/assets.json','utf8'));
