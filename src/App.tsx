@@ -110,7 +110,7 @@ export function App({ initialPath, initialView }: { initialPath: string; initial
   },close}}>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <main id="main-content" tabIndex={-1} className="site-main" key={route?.id||'404'}>
-      {route&&View?<View pageKey={route.id}/>:<div className="not-found"><img src="/images/orsen-logo-black.webp" width="160" height="45" alt="Orsen Labs"/><h1 tabIndex={-1}>Page not found.</h1><p>Let’s get you back to what’s next.</p><RouteAction to="home" className="pill pill-dark">Back to home</RouteAction></div>}
+      {route&&View?<View pageKey={route.id}/>:<div className="not-found"><img src="/images/orsen-logo-black-640-v1.webp" width="640" height="111" alt="Orsen Labs"/><h1 tabIndex={-1}>Page not found.</h1><p>Let’s get you back to what’s next.</p><RouteAction to="home" className="pill pill-dark">Back to home</RouteAction></div>}
     </main>
     <SiteFooter screen={route?.id||'home'}/>
     <dialog ref={dialog} className="site-dialog" data-kind={overlay?.kind} aria-label={overlay?.kind==='media'?`${overlay.item.title} preview`:overlay?.kind==='contact'?'Contact Orsen Labs':'Navigation menu'} onCancel={e=>{e.preventDefault();close();}} onClick={e=>{if(e.target===e.currentTarget)close();}}>

@@ -1,0 +1,11 @@
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/orsen-logo-black-640-v1.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/orsen-logo-white-640-v1.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=86400

@@ -36,7 +36,9 @@ const heroPreloads = homeHero.sources.map(({ image, media, sizes }) => {
 for(const route of [...routes,{path:'/404',title:'Page Not Found — Omni Labs',description:'The requested page could not be found.'}]) {
   const url=new URL(route.path,origin).href;
   const head=`<link rel="canonical" href="${url}" /><meta property="og:url" content="${url}" /><meta property="og:image" content="${origin}/images/business-workspace-1672.webp" />${route.path==='/404'?'<meta name="robots" content="noindex" />':''}`;
-  const priority = pagePreloads(route.id) + (route.id === 'home' ? heroPreloads : '');
+  const logo = route.id === 'portfolio' ? 'black' : 'white';
+  const logoPreload = route.id ? `<link rel="preload" as="image" fetchpriority="high" href="/images/orsen-logo-${logo}-640-v1.webp" />` : '';
+  const priority = logoPreload + pagePreloads(route.id) + (route.id === 'home' ? heroPreloads : '');
   const html=template.replace('<!--app-html-->',await render(route.path))
     .replace(/<title>.*?<\/title>/,`<title>${escape(route.title)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*/,`$1${escape(route.description)}`)
