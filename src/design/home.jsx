@@ -16,10 +16,9 @@ function Homepage() {
         eager />
       <div data-node-label="Hero Contrast Scrim" className="home-hero-shade" aria-hidden="true" />
       <div data-node-label="Hero Message" className="grid relative w-full max-w-[1320px] items-end grid-cols-[1.5fr_0.8fr] z-[10] mx-auto my-0 gap-[38px] max-[960px]:flex max-[960px]:flex-col max-[960px]:items-start max-[960px]:gap-6" data-artboard-style="ref-2">
-        <h1 id="home-heading" data-node-label="Hero Headline" className="home-hero-headline" tabIndex={-1} aria-label="AI solutions for marketing, support, and software.">
-          <span className="hero-line" data-node-label="Hero First Line"><span>AI solutions for</span></span>
-          <span className="hero-line" data-node-label="Hero Second Line"><span>marketing, support,</span></span>
-          <span className="hero-line" data-node-label="Hero Third Line"><span>and software.</span></span>
+        <h1 id="home-heading" data-node-label="Hero Headline" className="home-hero-headline" tabIndex={-1} aria-label="AI marketing, agents, and software that grow your business.">
+          <span className="hero-line" data-node-label="Hero First Line"><span>AI marketing, agents,</span></span>
+          <span className="hero-line" data-node-label="Hero Second Line"><span>and software that grow your business.</span></span>
         </h1>
         <div data-node-label="Hero Supporting Content" className="flex min-w-0 max-w-[380px] flex-col justify-self-end gap-5" data-artboard-style="ref-6">
           <span data-node-label="Hero Supporting Copy" className="[color:var(--nura-white)] [font-family:var(--omni-interface-font)] text-lg font-normal not-italic [-webkit-font-smoothing:antialiased] leading-[1.51] tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[639px]:text-base" data-artboard-style="ref-7">Orsen Labs creates AI campaigns, automates work with agents, and builds custom business software.</span>
