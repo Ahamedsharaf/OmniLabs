@@ -74,7 +74,7 @@ function SiteFooter({
         </nav>
       </div>
       <div data-node-label="Footer Signature Crop" aria-hidden="true" className="relative block w-[92%] max-w-[1200px] h-[170px] mx-auto overflow-clip max-[1100px]:w-[90%] max-[1100px]:h-[106px] max-[700px]:w-[94%] max-[700px]:h-[58px]">
-        <img data-node-label="Oversized Omni Logo" src="/images/orsen-footer-signature.webp" alt="" loading="lazy" decoding="async" className="absolute top-[-64px] left-0 block w-full h-auto opacity-[0.075] object-contain max-[1100px]:top-[-36px] max-[700px]:top-[-17px]" />
+        <img data-node-label="Oversized Omni Logo" src="/images/orsen-footer-signature.webp" alt="" loading="lazy" decoding="async" className="absolute inset-0 block w-full h-full opacity-[0.14] object-contain" />
       </div>
     </footer>;
 }
