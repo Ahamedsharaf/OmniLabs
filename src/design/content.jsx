@@ -21,9 +21,9 @@ const sitePages = {
   },
   "about": {
     "key": "about",
-    "name": "About Omni Labs",
+    "name": "About Orsen Labs",
     "title": "Bring your ideas\ninto everyday business.",
-    "intro": "Omni Labs brings creative production, AI automation, and custom software together.",
+    "intro": "Orsen Labs brings creative production, AI automation, and custom software together.",
     "rows": [["Start with the business", "Understand your customers, systems, and the problem to solve."], ["Build with your team", "Agree on scope, review working prototypes, and refine the details."], ["Connect the work", "Link campaigns, conversations, and operations through suitable integrations."], ["Improve over time", "Review results, resolve issues, and plan the next iteration."]]
   },
   "contact-page": {

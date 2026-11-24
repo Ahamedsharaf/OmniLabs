@@ -166,7 +166,7 @@ function WorkflowPage() {
               "text": ["Project scope", "Creative, automation, or software"]
             }, {
               "ids": ["lie.jon", "lie.cop", "lie.sub"],
-              "text": ["Collaboration", "Your team + Omni Labs"]
+              "text": ["Collaboration", "Your team + Orsen Labs"]
             }, {
               "ids": ["lie.fit", "lie.int", "lie.ste"],
               "text": ["Approvals", "Before launch"]

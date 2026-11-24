@@ -65,10 +65,10 @@ const sections: readonly Section[] = [
   {
     label: 'About',
     to: 'about',
-    overview: 'About Omni Labs',
+    overview: 'About Orsen Labs',
     links: [
       ['Our workflow', 'workflow', 'See how we work with your team from idea to delivery.'],
-      ['Work with us', 'work-with-us', 'Explore your options for working with Omni Labs.'],
+      ['Work with us', 'work-with-us', 'Explore your options for working with Orsen Labs.'],
     ],
   },
 ];

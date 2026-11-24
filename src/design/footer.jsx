@@ -55,13 +55,13 @@ function SiteFooter({
         <nav aria-label="Footer" data-node-label="Footer Columns" className="grid w-full items-start grid-cols-[minmax(0px,_1.55fr)_minmax(0px,_1.22fr)_minmax(0px,_1.06fr)_minmax(0px,_0.75fr)_minmax(0px,_0.78fr)] gap-x-9 gap-y-8 max-[1100px]:grid-cols-4 max-[1100px]:gap-x-6 max-[700px]:grid-cols-2 max-[700px]:gap-y-6">
           <div data-node-label="Footer Brand Group" className="flex min-w-0 flex-col items-start gap-4 max-[1100px]:col-span-4 max-[700px]:col-span-2">
             <RouteAction data-node-label="Footer Home Link" to="home" className="block w-fit max-w-full cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4">
-              <img data-node-label="Footer Logo" src="/images/omni-logo-white.webp" alt="Omni Labs home" className="block w-40 max-w-full h-auto object-contain" />
+              <img data-node-label="Footer Logo" src="/images/orsen-logo-white.webp" alt="Orsen Labs home" className="block w-40 max-w-full h-auto object-contain" />
             </RouteAction>
             <span data-node-label="Footer Description" className="block max-w-[212px] [color:var(--omni-light-copy)] text-sm leading-[1.48]">Creative. Automation. Software.</span>
             <RouteAction data-node-label="Footer Brand Contact" to={contactTarget} className="inline-flex w-fit min-h-11 shrink-0 justify-center items-center [background-color:var(--nura-white)] [color:var(--nura-ink)] rounded-full px-[18px] py-0 cursor-pointer transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4">
               <span data-node-label="Contact Button Label" className="block w-fit [color:var(--nura-ink)] text-sm font-medium leading-none">Get in touch</span>
             </RouteAction>
-            <span data-node-label="Footer Copyright" className="block w-fit [color:var(--omni-footer-label)] text-[13px] leading-[1.45]">© 2026 Omni Labs</span>
+            <span data-node-label="Footer Copyright" className="block w-fit [color:var(--omni-footer-label)] text-[13px] leading-[1.45]">© 2026 Orsen Labs</span>
           </div>
           {footerLinks.map(group => <div key={group.title} data-node-label="Footer Link Group" className="flex min-w-0 flex-col items-start gap-3">
               <span data-node-label="Footer Group Title" className="block w-fit [color:var(--omni-footer-label)] text-[13px] font-medium leading-[1.45]">{group.title}</span>
@@ -74,7 +74,7 @@ function SiteFooter({
         </nav>
       </div>
       <div data-node-label="Footer Signature Crop" aria-hidden="true" className="relative block w-[92%] max-w-[1200px] h-[170px] mx-auto overflow-clip max-[1100px]:w-[90%] max-[1100px]:h-[106px] max-[700px]:w-[94%] max-[700px]:h-[58px]">
-        <img data-node-label="Oversized Omni Logo" src="/images/omni-logo-white.webp" alt="" className="absolute top-[-64px] left-0 block w-full h-auto opacity-[0.075] object-contain max-[1100px]:top-[-36px] max-[700px]:top-[-17px]" />
+        <img data-node-label="Oversized Omni Logo" src="/images/orsen-logo-white.webp" alt="" className="absolute top-[-64px] left-0 block w-full h-auto opacity-[0.075] object-contain max-[1100px]:top-[-36px] max-[700px]:top-[-17px]" />
       </div>
     </footer>;
 }
