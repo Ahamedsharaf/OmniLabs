@@ -28,6 +28,18 @@ const sections: readonly Section[] = [
     links: portfolioCollections.map(({ title, id, format }) => [title, 'portfolio:' + id, format]),
   },
   {
+    label: 'Industries',
+    to: 'industries',
+    links: [
+      ['Retail & E-commerce', 'retail', 'Connect product content, customer support, and retail operations.'],
+      ['Hospitality & Travel', 'hospitality', 'Connect discovery, bookings, and service across the guest journey.'],
+      ['Real Estate', 'realestate', 'Give prospects clearer information and teams a connected sales workflow.'],
+      ['Professional Services', 'professional', 'Bring client communication, internal knowledge, and delivery together.'],
+      ['Growing Businesses', 'growing', 'Connect more of your business as your team grows.'],
+      ['Enterprise Teams', 'enterprise', 'Plan AI adoption around business objectives and existing systems.'],
+    ],
+  },
+  {
     label: 'Blog',
     to: 'blog',
     links: [
@@ -36,15 +48,7 @@ const sections: readonly Section[] = [
       ['Business software', 'blog:business-software', 'Perspectives on useful software for growing teams.'],
     ],
   },
-  {
-    label: 'About',
-    to: 'about',
-    links: [
-      ['Our workflow', 'workflow', 'See how we work with your team from idea to delivery.'],
-      ['Work with us', 'work-with-us', 'Explore your options for working with Orsen Labs.'],
-    ],
-  },
-];
+\n];
 
 const contact: Section = {
   label: 'Let’s talk',
