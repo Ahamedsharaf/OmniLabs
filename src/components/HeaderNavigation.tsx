@@ -7,7 +7,6 @@ type MenuLink = readonly [label: string, to: string, description: string];
 type Section = {
   label: string;
   to: string;
-  overview: string;
   links: readonly MenuLink[];
   disclosure?: boolean;
 };
@@ -16,7 +15,6 @@ const sections: readonly Section[] = [
   {
     label: 'Solutions',
     to: 'solutions',
-    overview: 'Explore all solutions',
     disclosure: true,
     links: [
       ['AI Creative & Marketing', 'creative', 'Commercials, campaign strategy, product imagery, and marketing systems.'],
@@ -27,13 +25,11 @@ const sections: readonly Section[] = [
   {
     label: 'Projects',
     to: 'portfolio',
-    overview: 'View projects',
     links: portfolioCollections.map(({ title, id, format }) => [title, 'portfolio:' + id, format]),
   },
   {
     label: 'Blog',
     to: 'blog',
-    overview: 'Visit the blog',
     links: [
       ['AI and automation', 'blog:ai-automation', 'Practical notes on AI agents and business automation.'],
       ['Marketing and creative', 'blog:marketing-creative', 'Ideas for campaigns, content, and creative work.'],
@@ -43,7 +39,6 @@ const sections: readonly Section[] = [
   {
     label: 'About',
     to: 'about',
-    overview: 'About Orsen Labs',
     links: [
       ['Our workflow', 'workflow', 'See how we work with your team from idea to delivery.'],
       ['Work with us', 'work-with-us', 'Explore your options for working with Orsen Labs.'],
@@ -54,7 +49,6 @@ const sections: readonly Section[] = [
 const contact: Section = {
   label: 'Let’s talk',
   to: 'contact-page',
-  overview: 'Get in touch',
   links: [
     ['Share a project brief', 'contact-page:inquiry', 'Tell us about your project, goals, and timing.'],
   ],
@@ -99,7 +93,7 @@ export function HeaderNavigation() {
     };
   }, [active, id]);
 
-  function renderSection({ label, to, overview, links, disclosure }: Section) {
+  function renderSection({ label, to, links, disclosure }: Section) {
     const isContact = to === contact.to;
     const booking = isContact ? siteConfig.calUrl : undefined;
     const open = active === to;
@@ -156,9 +150,6 @@ export function HeaderNavigation() {
           <div className="header-dropdown-inner">
             <div className="header-dropdown-content">
               <div className="header-dropdown-main">
-                <RouteAction to={to} className="header-dropdown-overview" onClick={close}>
-                  {overview}
-                </RouteAction>
                 <div className="header-dropdown-grid">
                   {links.map(([name, target, description]) => (
                     <RouteAction key={target} to={target} className="header-dropdown-link" onClick={close}>
