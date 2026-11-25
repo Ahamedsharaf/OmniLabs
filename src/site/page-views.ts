@@ -8,12 +8,13 @@ const standalonePages: Partial<Record<string, [file: string, component: string]>
   agents: ['services', 'Agents'],
   software: ['services', 'Software'],
   portfolio: ['portfolio', 'PortfolioPage'],
+  blog: ['blog', 'BlogPage'],
   workflow: ['workflow', 'WorkflowPage'],
   'work-with-us': ['work-with-us', 'WorkWithUsPage'],
 };
 
 const modules = import.meta.glob<Record<string, PageView>>(
-  '/src/design/{home,services,content,portfolio,workflow,work-with-us}.jsx',
+  '/src/design/{home,services,content,portfolio,workflow,work-with-us,blog}.jsx',
 );
 const loaded = new Map<string, PageView>();
 const pending = new Map<string, Promise<PageView>>();
