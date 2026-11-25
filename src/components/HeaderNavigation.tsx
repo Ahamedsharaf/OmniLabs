@@ -161,25 +161,37 @@ export function HeaderNavigation() {
         )}
         <div className="header-dropdown-panel" id={panelId} inert={!open}>
           <div className="header-dropdown-inner">
-            <RouteAction to={to} className="header-dropdown-overview" onClick={close}>
-              {overview} {arrow}
-            </RouteAction>
-            <div className="header-dropdown-grid" data-compact={links.length + Number(Boolean(booking)) < 3}>
-              {links.map(([name, target, description]) => (
-                <RouteAction key={target} to={target} className="header-dropdown-link" onClick={close}>
-                  <span className="header-dropdown-name">{name} {arrow}</span>
-                  <span className="header-dropdown-description">{description}</span>
+            <div className="header-dropdown-content">
+              <div className="header-dropdown-main">
+                <RouteAction to={to} className="header-dropdown-overview" onClick={close}>
+                  {overview} {arrow}
                 </RouteAction>
-              ))}
-              {booking && <a href={booking} target="_blank" rel="noopener noreferrer" className="header-dropdown-link"
-                onClick={() => {
-                  document.getElementById(triggerProps.id)?.focus({ preventScroll: true });
-                  close();
-                }}>
-                <span className="header-dropdown-name">Book a call {arrow}</span>
-                <span className="header-dropdown-description">Choose a time for a 30-minute call on Cal.com.</span>
-                <span className="sr-only"> Opens in a new tab.</span>
-              </a>}
+                <div className="header-dropdown-grid">
+                  {links.map(([name, target, description]) => (
+                    <RouteAction key={target} to={target} className="header-dropdown-link" onClick={close}>
+                      <span className="header-dropdown-name">{name} {arrow}</span>
+                      <span className="header-dropdown-description">{description}</span>
+                    </RouteAction>
+                  ))}
+                  {booking && <a href={booking} target="_blank" rel="noopener noreferrer" className="header-dropdown-link"
+                    onClick={() => {
+                      document.getElementById(triggerProps.id)?.focus({ preventScroll: true });
+                      close();
+                    }}>
+                    <span className="header-dropdown-name">Book a call {arrow}</span>
+                    <span className="header-dropdown-description">Choose a time for a 30-minute call on Cal.com.</span>
+                    <span className="sr-only"> Opens in a new tab.</span>
+                  </a>}
+                </div>
+              </div>
+              <RouteAction to={to} className="header-dropdown-feature" onClick={close}>
+                <img src="/images/business-workspace-960.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+                <span className="header-dropdown-feature-copy">
+                  <span className="header-dropdown-feature-title">Orsen Labs</span>
+                  <span className="header-dropdown-feature-caption">Applied AI, shaped around your business.</span>
+                  <span className="header-dropdown-feature-link">Explore {label.toLowerCase()} {arrow}</span>
+                </span>
+              </RouteAction>
             </div>
           </div>
         </div>
