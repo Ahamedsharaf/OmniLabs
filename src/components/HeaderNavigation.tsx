@@ -150,10 +150,7 @@ export function HeaderNavigation() {
             setActive(current => current === to ? null : to);
           }}>{label}</button>
         ) : (
-          <RouteAction {...triggerProps} to={to} onClick={close}>
-            {label}
-            
-          </RouteAction>
+          <RouteAction {...triggerProps} to={to} onClick={close}>{label}</RouteAction>
         )}
         <div className="header-dropdown-panel" id={panelId} inert={!open}>
           <div className="header-dropdown-inner">
