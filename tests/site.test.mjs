@@ -19,6 +19,10 @@ test('pre-rendered pages have real headings, metadata and only working local lin
     assert.equal((html.match(/<h1(?:\s|>)/g)||[]).length,1,`${route.path}: exactly one h1`);
     assert.match(html,/<meta name="description" content="[^"]+"/);
     assert.ok(html.includes('<link rel="canonical"'));
+    const primaryNav = html.match(/<nav\b[^>]*aria-label="Primary"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+    assert.ok(primaryNav, `${route.path}: primary navigation is present`);
+    const navLabels = [...primaryNav.matchAll(/class="header-nav-label">([^<]+)/g)].map(([, label]) => label);
+    assert.deepEqual(navLabels, ['Solutions', 'Projects', 'Industries', 'Blog'], route.path);
     for(const [,url] of html.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
       const decoded=url.replaceAll('&amp;','&');
       assert.ok(routeForPath(decoded)||fs.existsSync('dist'+decoded),`${route.path}: missing ${decoded}`);

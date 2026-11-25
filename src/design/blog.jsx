@@ -1,11 +1,13 @@
 import { RouteAction } from "../components/RouteAction";
+import { SiteNavigation } from "./navigation";
 
 function BlogPage() {
-  return <section className="block min-h-[60vh] bg-[var(--omni-paper)] px-[60px] py-24 max-[700px]:px-[22px] max-[700px]:py-14">
-    <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-8">
+  return <section className="block min-h-[60vh] bg-[var(--omni-paper)] px-[60px] max-[1100px]:px-10 max-[700px]:px-[22px]">
+    <SiteNavigation light />
+    <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-8 py-24 max-[700px]:py-14">
       <div className="flex flex-col gap-4">
         <span className="text-sm uppercase tracking-[0.12em] text-[var(--omni-muted)]">Orsen Labs Journal</span>
-        <h1 className="max-w-[850px] text-[72px] font-light leading-[1.02] tracking-[-3px] text-[var(--nura-ink)] max-[700px]:text-[44px] max-[700px]:tracking-[-1.8px]">Ideas for work that moves forward.</h1>
+        <h1 tabIndex={-1} className="max-w-[850px] text-[72px] font-light leading-[1.02] tracking-[-3px] text-[var(--nura-ink)] max-[700px]:text-[44px] max-[700px]:tracking-[-1.8px]">Ideas for work that moves forward.</h1>
         <p className="max-w-[560px] text-lg leading-relaxed text-[var(--omni-muted)]">Perspectives on AI marketing, helpful agents, and business software.</p>
       </div>
       <div className="grid grid-cols-3 gap-4 border-t border-[var(--omni-line)] pt-6 max-[700px]:grid-cols-1">
