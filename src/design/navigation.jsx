@@ -9,7 +9,10 @@ function SiteNavigation({
   const [scrolled, setScrolled] = useState(false);
   const [portalReady, setPortalReady] = useState(false);
   useEffect(() => {
-    const update = () => setScrolled(window.scrollY > 24);
+    const update = () => {
+      const hero = document.querySelector('.home-hero-frame');
+      setScrolled(hero ? hero.getBoundingClientRect().bottom <= 82 : window.scrollY > 24);
+    };
     update();
     window.addEventListener("scroll", update, { passive: true });
     setPortalReady(true);
