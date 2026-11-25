@@ -49,7 +49,7 @@ function Homepage() {
         <h2 data-node-label="Business Challenges Headline" className="w-fit [color:var(--nura-ink)] [font-family:'ABC_Favorit',_Inter,_sans-serif] text-[62px] font-light not-italic [-webkit-font-smoothing:antialiased] leading-[1.055] tracking-[-3.41px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[900px]:text-[50px] max-[639px]:text-[39px] max-[639px]:tracking-[-2px]" tabIndex={-1} data-artboard-style="ref-18">Solving the problems</h2>
       </div>
       <div data-node-label="Business Challenge Cards" className="grid grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)] gap-3.5 max-[639px]:grid-cols-1" data-artboard-style="ref-102">
-        <RouteAction data-node-label="Business Challenge Concept" className="group flex relative w-full min-w-0 min-h-[440px] flex-col justify-between [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[18px] p-[22px] overflow-clip max-[1000px]:min-h-[338px] max-[639px]:min-h-[325px] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="creative" aria-label={"AI Creative & Marketing"} data-artboard-style="ref-19">
+        <RouteAction data-node-label="Business Challenge Concept" className="flex relative w-full min-w-0 min-h-[440px] flex-col justify-between [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[18px] p-[22px] overflow-clip max-[1000px]:min-h-[338px] max-[639px]:min-h-[325px] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="creative" aria-label={"AI Creative & Marketing"} data-artboard-style="ref-19">
           <Artwork data-node-label="Creative Film Still" role="img" aria-label="Cinematic still of a man using a desk phone" className="absolute inset-0 size-full bg-cover bg-no-repeat [background-position:50%_50%]" image="creative-film-still" positionId="art-2" sizes="(max-width: 639px) max(335px, calc(100vw - 44px)), (max-width: 1100px) 350px, 440px"></Artwork>
           <div data-node-label="Challenge Photograph Contrast" className="inset-0 block absolute [background-image:linear-gradient(180deg,_var(--omni-cinema-scrim)_0%,_var(--omni-cinema-soft)_27%,_var(--omni-clear-shade)_52%,_var(--omni-clear-shade)_65%,_var(--omni-cinema-scrim)_100%)]"></div>
           <div data-node-label="Challenge Concept Header" className="flex relative min-w-0 justify-between items-start z-[10] gap-[7px]" data-artboard-style="ref-20">
@@ -75,7 +75,7 @@ function Homepage() {
           </div>
           <span data-node-label="Concept Solution Category" className="relative w-fit z-[10] [color:var(--nura-white)] [font-family:var(--omni-interface-font)] text-[13px] font-medium not-italic [-webkit-font-smoothing:antialiased] leading-tight tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal" data-artboard-style="ref-26">AI Agents &amp; Automation</span>
         </RouteAction>
-        <RouteAction data-node-label="Business Challenge Concept" className="group flex relative w-full min-w-0 min-h-[440px] flex-col justify-between [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[18px] p-[22px] overflow-clip max-[1000px]:min-h-[338px] max-[639px]:min-h-[325px] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="software" aria-label={"Applications & Business Software"} data-artboard-style="ref-27">
+        <RouteAction data-node-label="Business Challenge Concept" className="flex relative w-full min-w-0 min-h-[440px] flex-col justify-between [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[18px] p-[22px] overflow-clip max-[1000px]:min-h-[338px] max-[639px]:min-h-[325px] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="software" aria-label={"Applications & Business Software"} data-artboard-style="ref-27">
           <Artwork data-node-label="Retro Office Photograph" className="absolute inset-0 size-full block max-w-full bg-cover bg-no-repeat [background-position:48%_50%]" image="retro-office-restored" positionId="art-4" sizes="640px"></Artwork>
           <div data-node-label="Challenge Photograph Contrast" className="inset-0 block absolute [background-image:linear-gradient(180deg,_var(--omni-cinema-scrim)_0%,_var(--omni-cinema-soft)_27%,_var(--omni-clear-shade)_52%,_var(--omni-clear-shade)_65%,_var(--omni-cinema-scrim)_100%)]"></div>
           <div data-node-label="Challenge Concept Header" className="flex relative min-w-0 justify-between items-start z-[10] gap-[7px]" data-artboard-style="ref-28">
@@ -97,7 +97,7 @@ function Homepage() {
         <h2 data-node-label="Solutions Display Type" className="max-w-[790px] [color:var(--nura-ink)] [font-family:'ABC_Favorit',_Inter,_sans-serif] text-6xl font-light not-italic [-webkit-font-smoothing:antialiased] leading-[1.04] tracking-[-3.3px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[900px]:text-[48px] max-[639px]:text-[39px] max-[639px]:tracking-[-2px]" tabIndex={-1} data-artboard-style="ref-33">Marketing, automation, and software</h2>
       </div>
       <div data-node-label="Solution Capability Grid" className="grid grid-cols-[minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)_minmax(0px,_1fr)] gap-[13px] max-[1110px]:grid-cols-2 max-[639px]:grid-cols-1">
-        <RouteAction data-node-label="AI Creative Photo Panel" className="group flex relative min-w-0 min-h-[453px] flex-col justify-end [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[19px] p-[22px] overflow-clip max-[639px]:min-h-[392px] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="creative" aria-label={"AI Creative & Marketing"} data-artboard-style="ref-34">
+        <RouteAction data-node-label="AI Creative Photo Panel" className="flex relative min-w-0 min-h-[453px] flex-col justify-end [background-color:var(--nura-ink)] [color:var(--nura-white)] rounded-[19px] p-[22px] overflow-clip max-[639px]:min-h-[392px] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]" to="creative" aria-label={"AI Creative & Marketing"} data-artboard-style="ref-34">
           <Artwork data-node-label="AI Creative Campaign Portrait" className="absolute inset-0 size-full block max-w-full bg-cover bg-no-repeat [background-position:50%_48%]" image="creative-portrait" positionId="art-5" sizes="(max-width: 639px) calc(100vw - 44px), (max-width: 1100px) 45vw, 380px"></Artwork>
           <div data-node-label="Creative Photograph Contrast" className="inset-0 block absolute [background-image:linear-gradient(180deg,_var(--omni-clear-shade)_0%,_var(--omni-clear-shade)_51%,_var(--omni-cinema-soft)_72%,_var(--omni-cinema-scrim)_100%)]"></div>
           <div data-node-label="Creative Capability Title" className="flex relative flex-col z-[10] gap-[5px]" data-artboard-style="ref-35">
@@ -212,23 +212,27 @@ function Homepage() {
       </div>
     </div>
   </div>
-  <div data-node-label="Homepage Workflow Preview" id="about" className="block w-full [background-color:var(--nura-white)] [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] px-[60px] py-16 max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12" data-artboard-style="ref-78">
-  <div data-node-label="Workflow Preview Layout" className="grid items-center grid-cols-[0.9fr_1.1fr] gap-16 max-[1100px]:flex max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-7">
-    <h2 data-node-label="Workflow Preview Heading" tabIndex={-1} className="flex flex-col text-[56px] font-light leading-[1.06] tracking-[-2.6px]" data-artboard-style="ref-79">
-      <span data-node-label="Workflow Preview First Line" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[56px] font-light not-italic [-webkit-font-smoothing:antialiased] leading-[1.06] tracking-[-2.6px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[44px] max-[1100px]:tracking-[-1.4px] max-[700px]:text-[38px]" data-artboard-style="ref-80">From brief</span>
-      <span data-node-label="Workflow Preview Second Line" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-[56px] font-light not-italic [-webkit-font-smoothing:antialiased] leading-[1.06] tracking-[-2.6px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[44px] max-[1100px]:tracking-[-1.4px] max-[700px]:text-[38px]" data-artboard-style="ref-81">to launch.</span>
-    </h2>
-    <div data-node-label="Workflow Preview Copy" className="flex min-w-0 max-w-[470px] flex-col items-start gap-6" data-artboard-style="ref-82">
-      <span data-node-label="Workflow Preview Description" className="[color:var(--omni-muted)] [font-family:var(--omni-interface-font)] text-xl font-normal not-italic [-webkit-font-smoothing:antialiased] leading-[1.55] tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[1100px]:text-[18px]" data-artboard-style="ref-83">A shared process, with clear reviews from the first idea to the final handover.</span>
-      <RouteAction data-node-label="Workflow Preview Action" to="workflow" className="inline-flex min-h-12 items-center [border-top-color:var(--nura-ink)] border-b [border-bottom-color:var(--nura-ink)] [border-left-color:var(--nura-ink)] [border-right-color:var(--nura-ink)] gap-3 cursor-pointer hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4" data-artboard-style="ref-84">
-        <span data-node-label="Workflow Preview Action Label" className="w-fit [color:var(--nura-ink)] [font-family:var(--omni-interface-font)] text-base font-normal not-italic [-webkit-font-smoothing:antialiased] leading-normal tracking-[0px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal" data-artboard-style="ref-85">Explore our workflow</span>
-        <div data-node-label="SVG" className="size-[19px] block aspect-[1]" data-wonder-svg-host="true">
-          <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="7" y1="17" x2="17" y2="7" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2px"></line><polyline points="7 7 17 7 17 17" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2px"></polyline></svg>
-        </div>
-      </RouteAction>
+  <section data-node-label="Selected Projects" id="projects" className="w-full bg-white px-[60px] py-[72px] max-[1100px]:px-10 max-[700px]:px-[22px] max-[1100px]:py-12" aria-labelledby="homepage-projects-heading">
+    <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-8">
+      <h2 id="homepage-projects-heading" className="text-[54px] font-light leading-[1.06] tracking-[-2.5px] max-[900px]:text-[46px] max-[700px]:text-[38px] max-[700px]:tracking-[-1.7px]">Selected projects</h2>
+      <div className="grid grid-cols-4 gap-6 max-[1100px]:grid-cols-2 max-[700px]:grid-cols-1 max-[1100px]:gap-5 max-[700px]:gap-8">
+        {[
+          { title: 'Creative campaigns', type: 'AI Creative & Marketing · Videos', image: 'creative-portrait', to: 'portfolio:commercial' },
+          { title: 'AI agents', type: 'AI Agents & Automation', image: 'agents-studio', to: 'agents' },
+          { title: 'Connected workflows', type: 'Automation · Case studies', image: 'business-workspace-4k', to: 'portfolio:automation-case-studies' },
+          { title: 'Business software', type: 'Applications & Business Software · Case studies', image: 'retro-office-restored', to: 'portfolio:software-case-studies' },
+        ].map(project => (
+          <RouteAction key={project.title} data-node-label="Homepage Project Card" to={project.to} aria-label={`View ${project.title}`} className="flex min-w-0 flex-col gap-4 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)]">
+            <span className="relative block aspect-[1.23] w-full overflow-clip rounded-[5px] bg-[#efefec]">
+              <Artwork className="absolute inset-0 size-full" image={project.image} sizes="(max-width: 700px) calc(100vw - 44px), (max-width: 1100px) 45vw, 22vw" aria-hidden="true" />
+            </span>
+            <span className="block text-[21px] font-normal leading-[1.25] tracking-[-0.55px] max-[700px]:text-[19px]">{project.title}</span>
+            <span className="-mt-3 block text-[14px] leading-[1.4] text-[#777873]">{project.type}</span>
+          </RouteAction>
+        ))}
+      </div>
     </div>
-  </div>
-</div>
+  </section>
   <div data-node-label="Industry Overview" className="block [background-color:var(--omni-paper)] [font-family:var(--omni-interface-font)] px-[60px] py-[69px] max-[1000px]:px-9 max-[639px]:px-[22px] max-[639px]:py-10" id="industries" data-artboard-style="ref-86">
     <div data-node-label="Industry Content" className="grid w-full max-w-[1320px] grid-cols-[0.82fr_1.18fr] mx-auto my-0 gap-10 max-[810px]:grid-cols-1 max-[810px]:gap-5" data-artboard-style="ref-87">
       <h2 data-node-label="Industry Display Type" className="w-fit [color:var(--nura-ink)] [font-family:'ABC_Favorit',_Inter,_sans-serif] text-[59px] font-light not-italic [-webkit-font-smoothing:antialiased] leading-[1.055] tracking-[-3.245px] text-left [direction:ltr] break-normal [overflow-wrap:normal] block whitespace-normal max-[639px]:text-[38px] max-[639px]:tracking-[-2px]" tabIndex={-1} data-artboard-style="ref-88">Industries</h2>

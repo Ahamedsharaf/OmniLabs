@@ -146,18 +146,10 @@
 }
 
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
-  [data-node-label="Business Challenge Concept"] > .artwork-frame,
   [data-node-label$="Video Space"] > [data-node-label$="Poster Artwork"] {
     transition:transform .7s var(--entrance-ease);
   }
-  [data-node-label="Business Challenge Concept"]:hover > .artwork-frame,
   [data-node-label$="Video Space"]:hover > [data-node-label$="Poster Artwork"] {
-    transform:scale(1.035);
-  }
-  [data-node-label="Business Challenge Concept"] [data-node-label="Concept Link Arrow"] {
-    transition:transform .25s ease;
-  }
-  [data-node-label="Business Challenge Concept"]:hover [data-node-label="Concept Link Arrow"] {
-    transform:translate(2px,-2px);
+    transform:scale(1.015);
   }
 }
