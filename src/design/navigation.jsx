@@ -1,10 +1,18 @@
 // Adapted from the user's approved Wonder export. Layout and copy retained.
 import { RouteAction } from "../components/RouteAction";
 import { HeaderNavigation } from "../components/HeaderNavigation";
+import { useEffect, useState } from "react";
 function SiteNavigation({
   light = false
 }) {
-  return <div data-node-label="Masthead Alignment" data-light={light} className="masthead-alignment group/site-nav flex w-full max-w-[1320px] min-h-[77px] justify-between items-center mx-auto my-0 gap-3 max-[1100px]:min-h-[66px]">
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 24);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+  return <div data-node-label="Masthead Alignment" data-light={light} data-scrolled={scrolled} className="masthead-alignment group/site-nav flex w-full max-w-[1320px] min-h-[77px] justify-between items-center mx-auto my-0 gap-3 max-[1100px]:min-h-[66px]">
           <RouteAction data-node-label="Omni Labs Brand Lockup" className="flex w-fit shrink-0 items-center [color:var(--nura-white)] [font-family:var(--omni-interface-font)] gap-[5px] cursor-pointer transition-opacity hover:opacity-85 active:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--omni-spruce)] group-data-[light=true]/site-nav:[color:var(--nura-ink)]" to="home" aria-label={"Orsen Labs home"}>
             <img data-node-label="Omni Labs Logo" src={light ? "/images/orsen-logo-black-640-v1.webp" : "/images/orsen-logo-white-640-v1.webp"} alt="Orsen Labs" width="640" height="111" fetchPriority="high" className="block h-auto object-contain" />
           </RouteAction>

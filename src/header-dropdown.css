@@ -1,4 +1,10 @@
-.masthead-alignment { position:relative; z-index:30; }
+.masthead-alignment { position:fixed!important; z-index:60; inset:0 0 auto; width:100%; max-width:none; min-height:82px; box-sizing:border-box; padding-inline:clamp(22px,4.17vw,80px); transition:min-height .24s ease; }
+.masthead-alignment::before { content:""; position:absolute; inset:0; z-index:-1; background:transparent; transition:background-color .24s ease,box-shadow .24s ease; pointer-events:none; }
+.masthead-alignment[data-scrolled=true]::before { background:#fff; box-shadow:0 5px 24px #10101012; }
+.masthead-alignment[data-scrolled=true] .header-nav-link { color:#171717; }
+.masthead-alignment[data-scrolled=true] .header-contact { color:#fff; background:#171717; }
+.masthead-alignment[data-scrolled=true] [aria-label="Open menu"] { color:#171717; border-color:#b8b8b3; }
+.masthead-alignment[data-scrolled=true] [data-node-label="Omni Labs Brand Lockup"] img { filter:brightness(0) saturate(100%); }
 .header-dropdown-trigger { position:relative; width:fit-content; white-space:nowrap; font-family:var(--omni-interface-font); font-weight:500; line-height:1; transition:color .2s ease,opacity .16s ease; }
 .header-primary { display:flex; align-items:center; gap:28px; }
 .header-nav-link { display:block; padding-block:14px; color:var(--nura-white); font-size:14px; text-underline-offset:4px; }
