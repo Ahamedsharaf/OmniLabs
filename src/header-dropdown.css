@@ -1,7 +1,7 @@
 .masthead-alignment { position:relative; z-index:30; }
 .header-dropdown-trigger { position:relative; width:fit-content; white-space:nowrap; font-family:var(--omni-interface-font); font-weight:500; line-height:1; transition:color .2s ease,opacity .16s ease; }
 .header-primary { display:flex; align-items:center; gap:28px; }
-.header-nav-link { display:block; padding-block:14px; color:var(--nura-white); font-size:14px; text-underline-offset:4px; }
+.header-nav-link { display:block; padding-block:14px; color:var(--nura-white); font-size:14px; text-underline-offset:4px; transition:color .2s ease,transform .24s var(--entrance-ease),opacity .16s ease; }\n.header-nav-link:hover { transform:translateY(-2px); }
 [data-light=true] .header-nav-link { color:var(--nura-ink); }
 .header-contact { display:inline-flex; min-height:48px; align-items:center; justify-content:center; padding-inline:18px; border-radius:999px; color:var(--nura-ink); background:var(--nura-white); font-size:13px; }
 [data-light=true] .header-contact { color:var(--nura-white); background:var(--nura-ink); }
@@ -31,4 +31,4 @@
 @media(width < 1100px) { .header-primary,.header-dropdown-disclosure[data-nav-menu="contact-page"] { display:none; } }
 @media(max-width:760px) { .header-dropdown-inner { padding:23px 22px 28px; } .header-dropdown-grid { grid-template-columns:1fr; row-gap:4px; } }
 @media(max-height:420px) { .header-dropdown-inner { max-height:calc(100vh - 82px); } }
-@media(prefers-reduced-motion:reduce) { .header-dropdown-disclosure[data-open=true] .header-dropdown-link { animation:none; } }
+@media(prefers-reduced-motion:reduce) { .header-nav-link { transition:none; } .header-dropdown-disclosure[data-open=true] .header-dropdown-link { animation:none; } }
