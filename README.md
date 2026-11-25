@@ -73,7 +73,11 @@ npm run deploy
 
 The build output and CLI configuration were also checked with
 `npx cf deploy ./dist --dry-run`. This project uses `cf`, with no Wrangler config.
-GitHub Actions runs the build and tests; deployment is explicit, not automatic.
+Cloudflare Workers Builds tracks `codex/omnilabs-wonder-website` for production.
+Pushes to that branch run `npm run build && npm test` and publish the passing
+build to `orsenlabs` using `npx --no-install cf deploy ./dist`. GitHub Actions
+also runs the build and tests. Check Cloudflare Workers & Pages → orsenlabs →
+Builds for deployment status and logs.
 
 For a custom domain, attach the confirmed domain to the Worker, set
 `VITE_SITE_URL` and rebuild so canonical URLs and the sitemap use that domain.
