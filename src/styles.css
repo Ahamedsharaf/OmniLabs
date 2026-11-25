@@ -24,6 +24,8 @@ main:focus,h1:focus,h2:focus { outline:none; }
 [data-node-label="Omni Labs Logo"] {width:160px;height:auto;}
 [data-node-label="Omni Labs Brand Lockup"] {flex-shrink:0;}
 [data-node-label="Hero Message"] {min-width:0;}
+[data-node-label="Concept Link Control"] {border:0; color:#fff;}
+[data-node-label="Concept Link Arrow"] {width:28px;height:28px;}
 [data-light=true] button[aria-label="Open menu"] {color:#151515;border-color:#767c75;}
 [data-light=true] button[aria-label="Open menu"]:hover {background-color:#1515150a;}
 [data-node-label="Footer Invitation Heading"] {text-shadow:0 2px 22px #0005;}
