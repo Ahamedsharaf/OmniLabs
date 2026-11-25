@@ -105,7 +105,6 @@ export function HeaderNavigation() {
     const open = active === to;
     const panelId = `${id}-${to}-panel`;
     const close = () => setActive(current => current === to ? null : current);
-    const arrow = <span aria-hidden="true">↗</span>;
     const triggerProps = {
       id: `${id}-${to}-trigger`,
       className: isContact ? 'header-dropdown-trigger header-contact' : 'header-dropdown-trigger header-nav-link',
@@ -153,10 +152,7 @@ export function HeaderNavigation() {
         ) : (
           <RouteAction {...triggerProps} to={to} onClick={close}>
             {label}
-            {isContact && <svg viewBox="0 0 24 24" aria-hidden="true" width="15" height="15" fill="none"
-              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M7 17 17 7M7 7h10v10" />
-            </svg>}
+            
           </RouteAction>
         )}
         <div className="header-dropdown-panel" id={panelId} inert={!open}>
@@ -164,12 +160,12 @@ export function HeaderNavigation() {
             <div className="header-dropdown-content">
               <div className="header-dropdown-main">
                 <RouteAction to={to} className="header-dropdown-overview" onClick={close}>
-                  {overview} {arrow}
+                  {overview}
                 </RouteAction>
                 <div className="header-dropdown-grid">
                   {links.map(([name, target, description]) => (
                     <RouteAction key={target} to={target} className="header-dropdown-link" onClick={close}>
-                      <span className="header-dropdown-name">{name} {arrow}</span>
+                      <span className="header-dropdown-name">{name}</span>
                       <span className="header-dropdown-description">{description}</span>
                     </RouteAction>
                   ))}
@@ -178,20 +174,12 @@ export function HeaderNavigation() {
                       document.getElementById(triggerProps.id)?.focus({ preventScroll: true });
                       close();
                     }}>
-                    <span className="header-dropdown-name">Book a call {arrow}</span>
+                    <span className="header-dropdown-name">Book a call</span>
                     <span className="header-dropdown-description">Choose a time for a 30-minute call on Cal.com.</span>
                     <span className="sr-only"> Opens in a new tab.</span>
                   </a>}
                 </div>
               </div>
-              <RouteAction to={to} className="header-dropdown-feature" onClick={close}>
-                <img src="/images/business-workspace-960.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
-                <span className="header-dropdown-feature-copy">
-                  <span className="header-dropdown-feature-title">Orsen Labs</span>
-                  <span className="header-dropdown-feature-caption">Applied AI, shaped around your business.</span>
-                  <span className="header-dropdown-feature-link">Explore {label.toLowerCase()} {arrow}</span>
-                </span>
-              </RouteAction>
             </div>
           </div>
         </div>
