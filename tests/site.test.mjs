@@ -2,8 +2,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {routes,routeHref,routeForPath} from '../src/site/routes.mjs';
-test('all 19 source pages have unique, resolvable public URLs',()=>{
-  assert.equal(routes.length,19);assert.equal(new Set(routes.map(x=>x.path)).size,19);
+test('all 20 source pages have unique, resolvable public URLs',()=>{
+  assert.equal(routes.length,20);assert.equal(new Set(routes.map(x=>x.path)).size,20);
   for(const route of routes){assert.equal(routeHref(route.id),route.path);assert.equal(routeForPath(route.path+'/')?.id,route.id);}
   assert.equal(routeHref('offer:agents','/solutions/agents-automation'),'/solutions/agents-automation#agents');
   assert.equal(routeForPath('/missing'),undefined);assert.equal(routeHref('unknown'),undefined);
