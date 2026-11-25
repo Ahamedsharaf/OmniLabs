@@ -4,6 +4,7 @@ export const routes = [
   { id:'creative', path:'/solutions/creative-marketing', title:'AI Creative & Marketing — Orsen Labs', description:'AI commercials, brand films, product imagery, campaign strategy and marketing systems for your business.' },
   { id:'agents', path:'/solutions/agents-automation', title:'AI Agents & Automation — Orsen Labs', description:'Customer assistants, connected workflows, knowledge retrieval and automation with human oversight.' },
   { id:'software', path:'/solutions/business-software', title:'Applications & Business Software — Orsen Labs', description:'Websites, mobile apps and custom business software tailored to your operations.' },
+  { id:'blog', path:'/blog', title:'Blog — Orsen Labs', description:'Ideas and perspectives on AI marketing, automation, and business software.' },
   { id:'portfolio', path:'/portfolio', title:'Portfolio — Orsen Labs', description:'Browse Orsen Labs’ creative video concepts and case study sections for AI agents, automation, and business software.' },
   { id:'workflow', path:'/workflow', title:'Our Workflow — Orsen Labs', description:'From first idea to working business: discover, design, build, review, launch and improve.' },
   { id:'industries', path:'/industries', title:'Industries — Orsen Labs', description:'Practical applications for retail, hospitality, real estate, professional services, growing businesses and enterprise teams.' },
