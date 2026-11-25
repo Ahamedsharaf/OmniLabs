@@ -48,7 +48,8 @@ const sections: readonly Section[] = [
       ['Business software', 'blog:business-software', 'Perspectives on useful software for growing teams.'],
     ],
   },
-\n];
+
+];
 
 const contact: Section = {
   label: 'Let’s talk',
